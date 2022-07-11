@@ -1,0 +1,1068 @@
+!SESSION 2022-07-11 13:48:06.662 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_321
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jst.ws.axis.consumption.ui 4 0 2022-07-11 13:48:08.536
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.axis.consumption.ui [536]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.0,1.2.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.consumption.ui [974]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.axis.creation.ui 4 0 2022-07-11 13:48:08.536
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.axis.creation.ui [537]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.300,1.2.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.consumption.ui [974]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis.consumption.ui; bundle-version="[1.0.101,1.1.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.axis.consumption.ui; bundle-version="1.0.1000.v201910301957"; singleton:="true"
+       org.eclipse.jst.ws.axis.consumption.ui [536]
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.0,1.2.0)"
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.axis2.consumption.core 4 0 2022-07-11 13:48:08.536
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.axis2.consumption.core [540]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.consumption.ui [974]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.axis2.consumption.ui 4 0 2022-07-11 13:48:08.536
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.axis2.consumption.ui [541]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.consumption.ui [974]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis2.consumption.core
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.axis2.consumption.core; bundle-version="1.0.200.v201903050508"
+       org.eclipse.jst.ws.axis2.consumption.core [540]
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.axis2.creation.core 4 0 2022-07-11 13:48:08.536
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.axis2.creation.core [543]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis2.consumption.core
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.axis2.consumption.core; bundle-version="1.0.200.v201903050508"
+       org.eclipse.jst.ws.axis2.consumption.core [540]
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+              org.eclipse.jst.ws.consumption.ui [974]
+                Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+                     org.eclipse.wst.wsdl.validation [990]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.axis2.creation.ui 4 0 2022-07-11 13:48:08.552
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.axis2.creation.ui [544]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis2.consumption.ui
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.axis2.consumption.ui; bundle-version="1.0.200.v201903050508"; singleton:="true"
+       org.eclipse.jst.ws.axis2.consumption.ui [541]
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+              org.eclipse.jst.ws.consumption.ui [974]
+                Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+                     org.eclipse.wst.wsdl.validation [990]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis2.consumption.core
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.axis2.consumption.core; bundle-version="1.0.200.v201903050508"
+              org.eclipse.jst.ws.axis2.consumption.core [540]
+                Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui
+                  -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis2.creation.core
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.axis2.creation.core; bundle-version="1.0.200.v201903050508"
+       org.eclipse.jst.ws.axis2.creation.core [543]
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis2.consumption.core
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.axis2.consumption.core; bundle-version="1.0.200.v201903050508"
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.axis2.consumption.core
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.axis2.consumption.core; bundle-version="1.0.200.v201903050508"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.cxf.consumption.ui 4 0 2022-07-11 13:48:08.552
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.cxf.consumption.ui [554]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.0,1.2.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.consumption.ui [974]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.cxf.creation.ui 4 0 2022-07-11 13:48:08.552
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.cxf.creation.ui [557]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.0,1.2.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.consumption.ui [974]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.creation.ui; bundle-version="[1.0.305,1.1.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.creation.ui; bundle-version="1.0.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.creation.ui [975]
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.0,1.2.0)"
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.cxf.consumption.ui; bundle-version="[1.0.0,1.1.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.cxf.consumption.ui; bundle-version="1.0.500.v201910301957"; singleton:="true"
+       org.eclipse.jst.ws.cxf.consumption.ui [554]
+         Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.0,1.2.0)"
+           -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.wsdl.ui 4 0 2022-07-11 13:48:08.958
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.wsdl.ui [875]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+       org.eclipse.wst.wsdl.validation [990]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.wsi.ui 4 0 2022-07-11 13:48:08.974
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.wsi.ui [879]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.wsi; bundle-version="[1.0.101,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.wsi; bundle-version="1.1.300.v202101270311"; singleton:="true"
+       org.eclipse.wst.wsi [991]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xml.xpath.core 4 0 2022-07-11 13:48:08.989
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xml.xpath.core [884]
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xml.xpath.core [osgi.identity; type="osgi.bundle"; version:Version="1.3.1.v201901071922"; osgi.identity="org.eclipse.wst.xml.xpath.core"; singleton:="true"] because it is exposed to package 'org.apache.xerces.dom' from resources org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.9.0.v201101211617"; osgi.identity="org.apache.xerces"] and org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xml.xpath.core [osgi.identity; type="osgi.bundle"; version:Version="1.3.1.v201901071922"; osgi.identity="org.eclipse.wst.xml.xpath.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.wst.xml.core)(bundle-version>=1.1.0))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.wst.xml.core
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.9.0.v201101211617"; osgi.identity="org.apache.xerces"]
+
+Chain 2:
+  org.eclipse.wst.xml.xpath.core [osgi.identity; type="osgi.bundle"; version:Version="1.3.1.v201901071922"; osgi.identity="org.eclipse.wst.xml.xpath.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package: org.apache.xerces.parsers; uses:=org.apache.xerces.dom
+    export: osgi.wiring.package=org.apache.xerces.dom
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xml.xpath.ui 4 0 2022-07-11 13:48:09.020
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xml.xpath.ui [885]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+       org.eclipse.wst.xml.xpath.core [884]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xml.xpath.ui [osgi.identity; type="osgi.bundle"; version:Version="1.1.300.v201904282210"; osgi.identity="org.eclipse.wst.xml.xpath.ui"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xml.xpath.ui [osgi.identity; type="osgi.bundle"; version:Version="1.1.300.v201904282210"; osgi.identity="org.eclipse.wst.xml.xpath.ui"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.2.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xml.xpath.ui [osgi.identity; type="osgi.bundle"; version:Version="1.1.300.v201904282210"; osgi.identity="org.eclipse.wst.xml.xpath.ui"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.wst.xml.xpath.core)(&(bundle-version>=1.2.0)(!(bundle-version>=2.0.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="1.3.1.v201901071922"; osgi.wiring.bundle="org.eclipse.wst.xml.xpath.core"; singleton:="true"
+  org.eclipse.wst.xml.xpath.core [osgi.identity; type="osgi.bundle"; version:Version="1.3.1.v201901071922"; osgi.identity="org.eclipse.wst.xml.xpath.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xsl.core 4 0 2022-07-11 13:48:09.020
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xsl.core [895]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+       org.eclipse.wst.xml.xpath.core [884]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.14.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xsl.debug.ui 4 0 2022-07-11 13:48:09.036
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xsl.debug.ui [896]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+       org.eclipse.wst.xsl.core [895]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+              org.eclipse.wst.xml.xpath.core [884]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.launching; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.launching; bundle-version="1.2.0.v201901071922"; singleton:="true"
+       org.eclipse.wst.xsl.launching [903]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.14.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xsl.exslt.ui 4 0 2022-07-11 13:48:09.052
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xsl.exslt.ui [899]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.ui; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.ui; bundle-version="1.2.100.v202004230532"; singleton:="true"
+       org.eclipse.wst.xsl.ui [905]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.ui; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.ui; bundle-version="1.1.300.v201904282210"; singleton:="true"
+              org.eclipse.wst.xml.xpath.ui [885]
+                Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.2.0,2.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+                     org.eclipse.wst.xml.xpath.core [884]
+                       No resolution report for the bundle.         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+              org.eclipse.wst.xsl.core [895]
+                Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xsl.ui [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v202004230532"; osgi.identity="org.eclipse.wst.xsl.ui"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xsl.ui [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v202004230532"; osgi.identity="org.eclipse.wst.xsl.ui"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.14.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xsl.ui [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v202004230532"; osgi.identity="org.eclipse.wst.xsl.ui"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xsl.jaxp.debug.ui 4 0 2022-07-11 13:48:09.067
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xsl.jaxp.debug.ui [901]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.jaxp.launching; bundle-version="[1.1.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.jaxp.launching; bundle-version="1.1.100.v202005251734"; singleton:="true"
+       org.eclipse.wst.xsl.jaxp.launching [902]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.launching; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xsl.launching; bundle-version="1.2.0.v201901071922"; singleton:="true"
+              org.eclipse.wst.xsl.launching [903]
+                Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+                     org.eclipse.wst.xsl.core [895]
+                       Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+                         -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+                            org.eclipse.wst.xml.xpath.core [884]
+                              No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.debug.ui; bundle-version="[1.1.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.debug.ui; bundle-version="1.1.0.v201901071922"; singleton:="true"
+       org.eclipse.wst.xsl.debug.ui [896]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.launching; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xsl.launching; bundle-version="1.2.0.v201901071922"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.launching; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.launching; bundle-version="1.2.0.v201901071922"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.ui; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.ui; bundle-version="1.2.100.v202004230532"; singleton:="true"
+       org.eclipse.wst.xsl.ui [905]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.ui; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.ui; bundle-version="1.1.300.v201904282210"; singleton:="true"
+              org.eclipse.wst.xml.xpath.ui [885]
+                Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.2.0,2.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.14.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xsl.jaxp.launching 4 0 2022-07-11 13:48:09.083
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xsl.jaxp.launching [902]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.launching; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.launching; bundle-version="1.2.0.v201901071922"; singleton:="true"
+       org.eclipse.wst.xsl.launching [903]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+              org.eclipse.wst.xsl.core [895]
+                Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+                     org.eclipse.wst.xml.xpath.core [884]
+                       No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.14.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xsl.launching 4 0 2022-07-11 13:48:09.098
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xsl.launching [903]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+       org.eclipse.wst.xsl.core [895]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+              org.eclipse.wst.xml.xpath.core [884]
+                No resolution report for the bundle.  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.14.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xsl.core [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v201907231732"; osgi.identity="org.eclipse.wst.xsl.core"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.xsl.ui 4 0 2022-07-11 13:48:09.114
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.xsl.ui [905]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.ui; bundle-version="[1.1.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.ui; bundle-version="1.1.300.v201904282210"; singleton:="true"
+       org.eclipse.wst.xml.xpath.ui [885]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.2.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+              org.eclipse.wst.xml.xpath.core [884]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.xsl.core; bundle-version="[1.2.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.xsl.core; bundle-version="1.2.100.v201907231732"; singleton:="true"
+       org.eclipse.wst.xsl.core [895]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.xml.xpath.core; bundle-version="[1.3.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.xml.xpath.core; bundle-version="1.3.1.v201901071922"; singleton:="true"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.wst.xsl.ui [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v202004230532"; osgi.identity="org.eclipse.wst.xsl.ui"; singleton:="true"] because it is exposed to package 'org.w3c.dom.events' from resources org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"] and org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.wst.xsl.ui [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v202004230532"; osgi.identity="org.eclipse.wst.xsl.ui"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.core.runtime)(&(bundle-version>=3.14.0)(!(bundle-version>=4.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; type="osgi.bundle"; version:Version="3.15.300.v20200520-1959"; osgi.identity="org.eclipse.osgi"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.wst.xsl.ui [osgi.identity; type="osgi.bundle"; version:Version="1.2.100.v202004230532"; osgi.identity="org.eclipse.wst.xsl.ui"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.xalan)(&(bundle-version>=2.7.1)(!(bundle-version>=2.8.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.7.2.v20201124-1837"; osgi.wiring.bundle="org.apache.xalan"
+  org.apache.xalan [osgi.identity; type="osgi.bundle"; version:Version="2.7.2.v20201124-1837"; osgi.identity="org.apache.xalan"]
+    import: (osgi.wiring.package=org.apache.xerces.parsers)
+     |
+    export: osgi.wiring.package=org.apache.xerces.parsers; uses:=org.w3c.dom.events
+  org.apache.xerces [osgi.identity; type="osgi.bundle"; version:Version="2.12.2.v20220131-0835"; osgi.identity="org.apache.xerces"]
+    import: (osgi.wiring.package=org.w3c.dom.events)
+     |
+    export: osgi.wiring.package: org.w3c.dom.events
+  org.w3c.dom.events [osgi.identity; type="osgi.bundle"; version:Version="3.0.0.draft20060413_v201105210656"; osgi.identity="org.w3c.dom.events"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.consumption.ui 4 0 2022-07-11 13:48:09.114
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.consumption.ui [974]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+       org.eclipse.wst.wsdl.validation [990]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jst.ws.creation.ui 4 0 2022-07-11 13:48:09.114
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jst.ws.creation.ui [975]
+  Unresolved requirement: Require-Bundle: org.eclipse.jst.ws.consumption.ui; bundle-version="[1.1.0,1.2.0)"
+    -> Bundle-SymbolicName: org.eclipse.jst.ws.consumption.ui; bundle-version="1.1.1001.v202103201626"; singleton:="true"
+       org.eclipse.jst.ws.consumption.ui [974]
+         Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+              org.eclipse.wst.wsdl.validation [990]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.wsdl.validation 4 0 2022-07-11 13:48:09.114
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.wsdl.validation [990]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wst.wsi 4 0 2022-07-11 13:48:09.114
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wst.wsi [991]
+  Unresolved requirement: Require-Bundle: org.eclipse.wst.wsdl.validation; bundle-version="[1.1.0,2.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.wst.wsdl.validation; bundle-version="1.3.0.v202101270311"; singleton:="true"
+       org.eclipse.wst.wsdl.validation [990]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.jface 2 0 2022-07-11 13:48:20.838
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-07-11 13:48:20.838
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a2ca681,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@784c74e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-07-11 13:48:30.541
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-11 13:49:54.472
+!MESSAGE Connection to http://jope.ow2.org/update/jope/site.xml failed on jope.ow2.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: jope.ow2.org
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-07-11 13:49:54.685
+!MESSAGE Connection to http://jope.ow2.org/update/jope/p2.index failed on jope.ow2.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: jope.ow2.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-07-11 14:05:48.928
+!MESSAGE An internal error occurred during: "SQL Statement Execution".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.datatools.sqltools.result.ResultsViewAPI.saveParentElapseTime(ResultsViewAPI.java:725)
+	at org.eclipse.datatools.sqltools.sqleditor.result.GroupSQLResultRunnable.run(GroupSQLResultRunnable.java:307)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:33:12.446
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:33:12.451
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:33:19.502
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:33:19.502
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:33:19.503
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:35:06.582
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:35:06.583
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:35:08.558
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:35:08.559
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 14:35:08.559
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2022-07-11 14:36:27.732
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2267)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeStructuredDocumentRegion(XMLModelParser.java:548)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeTagName(XMLModelParser.java:580)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.changeRegion(XMLModelParser.java:349)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.regionChanged(DOMModelImpl.java:801)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:544)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1182)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1966)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2425)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2410)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:143)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:146)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2370)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:150)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:108)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:106)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1093)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1118)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:627)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:223)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7432)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8306)
+	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2511)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:6073)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6104)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5793)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4213)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1471)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4862)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4740)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4923)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3628)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1158)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1047)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-11 15:02:10.840
+!MESSAGE Could not publish server configuration: FWK005 parse may not be called while parsing..
+!STACK 0
+org.xml.sax.SAXException: FWK005 parse may not be called while parsing.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.eclipse.jst.server.tomcat.core.internal.xml.Factory.loadDocument(Factory.java:90)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatVersionHelper.publishCatalinaContextConfig(TomcatVersionHelper.java:509)
+	at org.eclipse.jst.server.tomcat.core.internal.Tomcat90Configuration.publishContextConfig(Tomcat90Configuration.java:676)
+	at org.eclipse.jst.server.tomcat.core.internal.TomcatServerBehaviour.publishFinish(TomcatServerBehaviour.java:465)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:1013)
+	at org.eclipse.wst.server.core.model.ServerBehaviourDelegate.publish(ServerBehaviourDelegate.java:776)
+	at org.eclipse.wst.server.core.internal.Server.publishImpl(Server.java:3184)
+	at org.eclipse.wst.server.core.internal.Server$PublishJob.run(Server.java:357)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:02:34.038
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:02:34.038
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:02:34.039
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:03:29.912
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:03:29.913
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:03:32.145
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:03:32.145
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2022-07-11 15:03:32.146
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:22:35.240
+!MESSAGE Plug-in 'org.eclipse.m2e.binaryproject.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.binaryproject.ui.action.importBinaryProjects
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:22:35.241
+!MESSAGE Plug-in 'org.eclipse.m2e.scm' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.materializeAction
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:22:35.241
+!MESSAGE Plug-in 'org.eclipse.m2e.editor' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.ShowDependencyHierarchy
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:22:35.242
+!MESSAGE Plug-in 'org.eclipse.m2e.refactoring' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.refactoring.DependencyExclude
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:08.872
+!MESSAGE Plug-in 'org.eclipse.m2e.binaryproject.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.binaryproject.ui.action.importBinaryProjects
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:08.872
+!MESSAGE Plug-in 'org.eclipse.m2e.scm' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.materializeAction
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:08.872
+!MESSAGE Plug-in 'org.eclipse.m2e.editor' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.ShowDependencyHierarchy
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:08.873
+!MESSAGE Plug-in 'org.eclipse.m2e.refactoring' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.refactoring.DependencyExclude
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:18.125
+!MESSAGE Plug-in 'org.eclipse.m2e.binaryproject.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.binaryproject.ui.action.importBinaryProjects
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:18.126
+!MESSAGE Plug-in 'org.eclipse.m2e.scm' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.materializeAction
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:18.126
+!MESSAGE Plug-in 'org.eclipse.m2e.editor' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.ShowDependencyHierarchy
+
+!ENTRY org.eclipse.ui 4 4 2022-07-11 15:23:18.127
+!MESSAGE Plug-in 'org.eclipse.m2e.refactoring' contributed an invalid Menu Extension (Path: 'org.eclipse.m2e.classpathMenu' is invalid): org.eclipse.m2e.refactoring.DependencyExclude

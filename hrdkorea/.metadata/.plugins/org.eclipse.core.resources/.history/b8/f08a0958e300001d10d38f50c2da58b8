@@ -1,0 +1,9 @@
+package com.lec.dao;
+
+import com.sun.corba.se.pept.transport.Connection;
+
+public class MemberDao {
+ public static Connection getConnection() throws Exception{
+	 Class.forName("oracle.jdbc.OracleDriver");
+ }
+}

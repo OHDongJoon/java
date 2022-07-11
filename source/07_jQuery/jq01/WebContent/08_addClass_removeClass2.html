@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Insert title here</title>
+  <style> 
+    table td {width: 100px; height: 100px; background-color: #AAFFAA;}
+    .tdRed {background-color : red;}
+  </style>
+  <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function(){
+    	 // id 속성 없이 하는 법 밑에는 통째로 이벤트를 거는 거고 
+    	  // td가 여러개 있으니 배열
+    	   $('td').each(function(idx , item){
+    		   $(this).click(function(){
+    			   alert(idx+'번째 선택하셨군요');
+    			   $('td').removeClass('tdRed');
+    			   $(this).addClass('tdRed');
+    		   });   // 따로 따로 이벤트 
+    	   });  
+    	   
+    	  /*  $('td').on('click', function(){ // on : '이벤트함수' , 수행로직? 
+    		 $('td').removeClass('tdRed'); // 모든 td들 #AAFFAA색으로 원상 복구
+    		 $(this).addClass('tdRed'); //내가 클린 한거는 tdRed 
+    		 var no = $(this).attr('id'); // 내가 클릭한 id 속성 가져오기 
+    		 alert(no+'번 째를 선택하셨군 하 '); 
+    	 }); */
+       });
+    </script>
+</head>
+<body>
+   <table>
+     <tr> 
+          <td ></td> <!-- class 는 중복 이름 가능  tdRed title s  -->
+          <td ></td>
+     </tr>
+      <tr> 
+          <td></td>
+          <td></td>
+     </tr>
+   </table>
+</body>
+</html>

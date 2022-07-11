@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Insert title here</title>
+  <style>
+    table {
+       border-collapse : collapse;
+    }
+    tr {
+       border-bottom: 1px solid blue;
+   </style>
+  <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function(){
+    	 $.ajax({  // ajax함수안에는 {} 객체가들어간다 
+    		url : 'ex.json',
+    		dataType : 'json',
+    		success : function(data){
+    		 out = '<tr><th>ID</th><th>NAME</th><th>PRICE</th><th>description</th></tr>';
+    		                     // idx 방 , item 객체 받아올 변수 
+    		 $.each(data , function(idx, item){
+    			 out += '<tr><td>'+item.id+'</td><td>' + item.name+'</td><td>'+item.price+'</td><td>'+
+    			 item.description+'</td></tr>';
+    		 });//$.each 함수
+    		 $('#dataShow').html(out);
+    		}// success 함수
+    	 });// $.ajax함수 
+    	 // 이거랑 똑같음 data = [{name:'키위'},{}]
+    	 // 받아온 data 값 each 함수 써서 
+       });
+    </script>
+</head>
+<body>
+  <table id="dataShow"></table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function go(n) {
+            var link = ['http://www.naver.com',
+                'http://www.daum.net',
+                'https://www.google.co.kr/',
+                'https://www.youtube.com/'];
+            location.href = link[n]; // location.href 주소로 이동?
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <h2>메뉴</h2>
+
+                <input type="button" value="네이버" onclick="go(0)" />
+                <input type="button" value="다음" onclick="go(1)" />
+                <input type="button" value="구글" onclick="go(2)" />
+                <input type="button" value="유튜브" onclick="go(3)" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

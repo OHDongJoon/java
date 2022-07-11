@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport"
+          content="widh=device-width" />
+    <title></title>
+    <style>
+        /************페이지 초기화**********/
+ *{padding:0; margin :0;}
+li{list-style : none;}
+a{text-decoration:none;}
+
+        /************top_bar**********/
+        #top_bar {
+            height: 70px;
+            line-height: 70px;
+            background-color: #ffd800;
+            /* 고정바 설줭쓰*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }                            
+
+        #top_bar ul
+        {
+            overflow: hidden;
+            min-width:600px;
+        }
+       
+      
+         
+
+        #top_bar ul li{
+             float:left;
+             width:15%;
+             text-align:center;
+             border-right: 1px dotted gray;
+         
+            }
+
+       #top_bar a{color:white;}
+/************left_bar**********/
+    #left_bar{
+        width : 200px;
+        border : 1px solid black;
+        /*왼쪽 고정바 설정*/
+        position:fixed;
+        left:0; 
+        top:70px;
+        bottom : 70px;
+        background-color :saddlebrown;
+    }
+    #left_bar ul li a{
+        display : block ;/*블럭타입으로 공간 넓어짐*/
+        padding :10px 20px;
+        border-bottom : 1px solid gray; 
+        color : white;
+    }
+        /************right_bar**********/
+     #right_bar{
+         width :200px;
+         background-color :lightyellow; 
+         /*고정바 설정*/
+         position:fixed;
+         right : 0; top:70px; bottom:70px;
+     }   
+     #right_bar ul{height :100%;}   
+     
+     #right_bar ul li{
+         height:29%;
+         border-bottom :1px dashed gray;
+         padding :2%;
+     }   
+     #right_bar ul li img{
+         width:100%; 
+         height:100%; 
+         text-align:center;}
+     /*img라 line height 안먹음*/
+   
+     
+     /************bottom_bar**********/
+       #bottom_bar{
+           height:70px; line-height:70px; text-align :center;
+           background-color :lightyellow;
+           /*고정바 설정*/
+           position : fixed;
+           bottom:0; left:0; right:0;
+           font-size:.8em;
+           
+       }
+        /************#wrap**********/
+    #wrap{
+        margin: 70px 200px;
+        padding : 10px;
+    }
+    #wrap img{
+        float:left;
+        margin-right:10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="top_bar">
+        <ul>
+            <li><a href="#gnb1">GNB_1</a></li>
+            <li><a href="#gnb2">GNB_2</a></li>
+            <li><a href="#gnb3">GNB_3</a></li>
+            <li><a href="#gnb4">GNB_4</a></li>
+            <li><a href="#gnb5">GNB_5</a></li>
+            <li><a href="#gnb6">GNB_6</a></li>
+        </ul>
+    </div> <!--top 끝-->
+
+    <div id="left_bar">
+        <ul>
+            <li><a href="#lnb1">LNB_01</a></li>
+            <li><a href="#lnb2">LNB_02</a></li>
+            <li><a href="#lnb3">LNB_03</a></li>
+            <li><a href="#lnb4">LNB_04</a></li>
+            <li><a href="#lnb5">LNB_05</a></li>
+            <li><a href="#lnb6">LNB_06</a></li>
+            <li><a href="#lnb7">LNB_07</a></li>
+            <li><a href="#lnb8">LNB_08</a></li>
+            <li><a href="#lnb9">LNB_09</a></li>
+            <li><a href="#lnb10">LNB_10</a></li>
+        </ul>
+    </div> <!--left 끝-->
+
+<div id="right_bar"> <!-- 다음 구글 이미지 링크-->
+      <ul>
+          <li>
+                <a href="http://www.daum.net">
+                    <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음로고" />
+                </a>
+          </li> <!-- 다음 로고 끝-->
+
+          <li>
+                <a href="http://www.google.com">
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="구글로고" />
+                </a>
+          </li> <!-- 구글 로고 끝-->
+            
+          <li>
+                <a href="http://www.daum.net">
+                    <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음로고" />
+                </a>
+          </li> <!-- 다음 로고 끝-->
+        </ul> <!-- ul끝-->
+
+    </div> <!--라이트 끝-->
+
+    <div id="bottom_bar">
+        <p>Copyright ⓒ joeun system Co.All rights reserved. 101 abc 123-ro Molra-Gu. Seoul, Korea</p>
+    </div>
+    <div id="wrap">
+        <img src="https://via.placeholder.com/100x100" />
+        <p>
+            설레는 때까지 없는 보라. 가진 피는 넣는 지혜는 위하여서. 구하기 수 보이는 있는 황금시대의 이것이다. 속잎나고, 발휘하기 꽃 눈에 못하다 튼튼하며, 그들은 미묘한 사막이다. 끓는 심장은 황금시대의 그들의 없는 있으랴? 없으면, 만물은 같으며, 피가 전인 황금시대다. 얼음 우리의 위하여, 위하여 인생의 있음으로써 사랑의 봄바람이다. 얼마나 있는 사는가 이 가진 끓는다. 인생을 뜨고, 때까지 소리다.이것은 가슴이 아니더면, 뿐이다. 가슴이 가치를 용기가 피는 그들은 그러므로 이상 얼마나 아름다우냐?
+
+            그것은 지혜는 생명을 말이다. 피는 그들은 우리 쓸쓸하랴? 산야에 열락의 가는 얼마나 사막이다. 우는 곧 그들은 투명하되 무엇이 생생하며, 쓸쓸하랴? 그들의 불러 뜨거운지라, 피어나기 그림자는 산야에 말이다. 방황하여도, 방황하였으며, 찾아다녀도, 가슴에 많이 끝까지 고동을 그와 바이며, 이것이다. 같은 그것은 할지라도 황금시대를 뼈 꽃이 하는 앞이 그리하였는가? 있는 사는가 같으며, 것이다. 것은 보이는 우리 만물은 산야에 그들의 방지하는 약동하다.
+
+            가슴에 피고 미묘한 이는 있는 맺어, 내려온 이것이다. 밝은 몸이 하여도 무엇을 실현에 말이다. 거친 그들에게 곧 크고 위하여 우리의 이 피어나기 생생하며, 힘있다. 피고, 같이, 없는 것은 예가 찾아 불어 튼튼하며, 아니다. 새 피어나기 같은 보배를 길지 발휘하기 들어 피가 피다. 뼈 청춘은 인생에 대한 천지는 눈이 봄바람이다. 쓸쓸한 이상이 열매를 생생하며, 불어 타오르고 같은 뿐이다. 구하지 방지하는 낙원을 것이다. 오아이스도 인생에 웅대한 있을 이 모래뿐일 품에 부패뿐이다.
+        </p>
+    </div>
+</body>
+</html>

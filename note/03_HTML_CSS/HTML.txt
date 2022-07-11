@@ -1,0 +1,23 @@
+★H1 제목
+★p 단락
+★<br />  엔터
+★<style> 디자인
+
+★alt="" 이미지가 않나오면 다른거 나오게
+
+
+★<a> 링크 클릭 href 가야할 사이트주소
+★target="_blank"
+
+
+★alert 팝업메세지창
+★textarea 자기소개
+★<input type="submit" value="회원가입" />
+★<input type="reset" value="초기화" />
+★required : 필수입력사항 이다 이말이야
+★margin: 0 auto; /*header를 브라우저의 가운데로*/
+★overflow:hidden; /*수평으로 배치하고자 하는 태그의 부모단 */
+
+-선태자란-
+★<div><!-- div로 한공간 만들어줌-->
+★font-weight : bold 글꼴을 진하게 표시함

@@ -1,0 +1,25 @@
+1. 테이블 생성 
+
+- FILEBOARD 생성
+
+- ADMIN TABLE 생성
+
+- DAO 에 들어갈 쿼리
+
+-로그인 전 화면 
+ 고객센터 : boardList.do
+ 회원가입 : joinView.do
+ 로그인 : loginView.do 
+
+
+사용자 모드 로그인후 
+
+고객센터 : boardList.do
+로그아웃 : logout.do
+정보수정 : modifyView.do
+
+관리자 모드 로그인 화면 
+allView.do ( 회원목록 뿌리기)
+고객센터 :boardList.do
+관리자모드 나가기 :logout.do
+

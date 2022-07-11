@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="회원가입.css" rel="stylesheet"
+          type="text/css" />
+    
+    <script>
+        function chk() {
+            if (frm.username.value.length < 2) {
+                alert('이름 2글자  이상 입력하세요');
+                frm.username.focus();
+                return false;
+
+            } else if (frm.id.value.length < 4) {
+                alert('4자리 이상의 ID를 입력하세요');
+                frm.id.focus();
+                return false;
+
+            } else if (!frm.pw.value) {
+                alert('비밀번호를 입력하세요')
+                frm.username.focus();
+                return false;
+            } else if (frm.pw.value.length < 2) {
+                alert('비밀번호를 2글자 이상 입력하세요')
+                frm.username.focus();
+                return false;
+            } else if (frm.pw.value != frm.pwChk.value) {
+                alert('두 비밀번호를 확인하세요')
+                frm.pw.value = '';
+                frm.pwChk.value = '';
+                frm.pw.focus();
+                return false;
+
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <fieldset>
+            <table>
+                <legend>필수입력사항</legend>
+                <ul>
+                    <li>
+                        <label for="user">이름<b>*</b></label>
+                        <input type="text" name="username" autofocus="autofocus" required="required" placeholder="이름은 2글자 이상" />
+                    </li> <!-- 이름 끝-->
+
+                    <li>
+                        <label for="userid">아이디<b>*</b></label>
+                        <input type="text" name="id" autofocus="autofocus" required="required" placeholder="아이디는 4글자" />
+                    </li> <!--아이디 끝-->
+
+                    <li>
+                        <label for="pw">비밀번호<b>*</b></label>
+                        <input type="password" name="pw" id="pw" required="required" />
+                    </li> <!--비밀번호 -->
+                    <li>
+                        <label for="pwC">확인비밀번호<b>*</b></label>
+                        <input type="password" name="pwChk" id="pwChk" required="required" />
+                    </li>
+                    <li>
+                        <label for="te">전화번호</label>
+                        <input type="text" name="tel" placeholder="000-0000-0000"
+                               pattern="\d{2,3}[ .-]{0,1}\d{3,4}[ .-]{0,1}\d{4}"
+                               title="전화번호 형식으르 지키세요" required="required" />
+                    </li>
+                    <li>
+                        <label for="em">이메일</label>
+                        <input type="email" name="email" placeholder="aaa@domain"
+                               pattern="[a-zA-z0-9][a-zA-Z0-9_.]+@[a-zA-z]\w+(\.[a-z]+){1,2}"
+                               title="메일 형식을 지켜주세요" />
+
+                    </li>
+                </ul>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>추가 입력사항</legend>
+            <ul>
+                
+                <li>
+                    <label for="ma">결혼유무</label>
+                    <input type="radio" name="marr" value="y" id="yes"/>기혼
+                    <input type="radio" name="marr" value="n" id="no"/>미혼
+                </li>
+                <li>
+                    <label for="gen">자식</label>
+                    <input type="radio" name="gender" value="m" id="man" />아들
+                    <input type="radio" name="gender" value="f" id="gir" />딸
+                </li>
+                <li>
+                    <select name="nation">
+                        <option>서울</option>
+                        <option>경기</option>
+                        <option>부산</option>
+                        <option>대전</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="회원가입" />
+                    <input type="reset" value="취소" />
+                </td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>

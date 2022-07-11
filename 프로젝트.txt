@@ -1,0 +1,4 @@
+header .lnb ul li .subMenu {display:none;}
+header .lnb ul li:hover .subMenu {display: block; margin: 10px 0 0 0;}
+서브메뉴(header.jsp) 참고
+

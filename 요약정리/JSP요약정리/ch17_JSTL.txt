@@ -1,0 +1,225 @@
+[ 17] JSTL(JSP Standard Tag Library)
+설치
+ https://tomcat.apache.org/taglibs/standard
+ -1.1 download
+ - binaries
+ -jakarta-taglibs-standard-1.1.2.zip 다운
+-apache-tomcat-9.0.63 _ lib 복붙
+
+1. JSTL 개요 
+   - JSP의 경우 HTMl 태그와 같이 사용되어 전체적인 
+       코드의 가독성이 떨어집니다
+  - JSP의 경우 JSP 태그와 HTML 태그가 반복 되고 믹스되어
+     번잡해 보이고 가독성도 떨어진다
+        그래서 이러 한 단점을 보완하고자 만들어진 
+           대표적인 태그 라이브러리가 JSTL 입니다.
+ - 개발자로 하여금 효율적이고 유지보수측면에서도 좋다 
+
+[1_core]
+------ex01.jsp------------
+★ ★ ★ Core  prefix="c"★ ★ ★
+- Core 라이브러리는 기본적인 라이브러리로 
+   - 출력 , 제어문 , 반복문 같은 기능이 포함
+-JSP 페이지에서 prefix를 사용하기 위해서는 taglib 지시자를 이용해
+   라이브러리의 URI 식별자와 접두어를 연결 해야 한다 
+- <c:tag>
+<%@ taglib prefix=“c” uri=”http://java.sun.com/jsp/jstl/core” %>
+                    (접두어)         (라이브러리를 식별하는 라이브러리)
+
+★<c:forEach var(변수) = "i"     ★ 
+                begin"1"  :1부터
+                end = "3" : 3까지
+★           step ="1" :1씩증가     ★
+
+-------------------------------------------------------------------------------
+
+★ ★ ★ fmt  prefix="fmt"★ ★ ★
+-숫자 , 날짜 , 시간을 포맷팅하는 기능과 국제화, 다국어
+    지원기능을 제공    <fmt:tag>
+
+★ ★ ★ 그외 라이브러리 (functions)★ ★ ★
+-fn 라이브러리는 el 표기법과 함께 사용
+  -ID파라미터를 대문자로 : 
+       ${fn:toUpperCase(param.id) } 
+----------------------------------------------------------------------------------
+
+--------------ex02_확장for.jsp---------------------------
+<%@ /core
+★확장 for문
+-  <c:set var"names" value="<%=names %>" /> 
+    :변수 선언
+
+- <c:forEach var="name" items="${names }">
+     { names }0방 , 1방..   => name에 넣어  
+    <p>${name }</p> 출력
+
+★일반 for문
+c :set var =idx 설정 value 는 0
+   c:forEach var "name" items ${names } 
+       <c:set var="idx" value=${idx+1 증가}
+
+---------------------ex03_var.jsp-----------------------------
+★변수 선언과 출력
+-value="<varValue>" :
+     -<  못씀
+
+-특수문자 사용하려면 
+    -<c:out value="${변수명}"
+★ c:out 이란 
+     어떤 값을 입력받던지 간에 콘솔이 아닌 화면에 문자열로
+        바꾸어서 보여주는 역할
+
+-excapeXml ="true" :
+    -특수문자 인식
+
+<c:remobe var="변수명"> :
+    -변수 삭제
+
+
+---------------------ex04_varScope.jsp----ex05_varScope.jsp-----------------------------
+
+노란단무지 제거 
+
+-물품정보 변수 설정 
+<jsp:forward page="ex05_varScope.jsp/> 설정
+슝~
+- 여기서 실행하면
+    화면은 ex05로뜨지만 
+         url 는 ex04로 뜸
+
+----------------------------------ex06_error.jsp-------------------------------------------
+
+< h2> 예외처리 </h2>
+-<c:catch var="변수">
+    - <%고의 에러 %>
+        
+ -<p>예외가 발생되면 즉시 catch절을 빠져나감 . 
+                이 p태그를 출력시 예외 x </p>
+    
+-예외 타입과 예외메세지 :<c out: value=${error }" 
+              default="예외발생 안됨"
+ 
+
+----------------------------------ex07_if.jsp---------------------
+
+ - <c:if test="${조건문 }">
+
+- <c:if test="${1+2 != 3 }" var="result" scope="page">
+      var="result" 변수에 결과 값 저장(참,거짓)
+
+----------------------------------ex08_visitNumInput.jsp,ex09.jsp---------------------
+  방문 횟수  출력
+ - <c:set var "변수명" value="${param.visitNum(ex8name)} 
+ - <c:if test="${(조건)visitNum eq 0 }">
+         방문횟수가 0이면 
+    첫방문 감사합니다~
+
+ --------------------------ex10_header.jsp-----------------------------
+
+-사용자가 로그인 성공 : session.setAttribute("customer")
+
+-관리자가 로그인 성공 : session.setArrtibute("admin")
+
+------------------------ex11_visitNumChoose.jsp--------------------------------------------------
+06월 15일
+ex8에서 action  옴
+★< c:choose  >
+       < c:when test = "${조건문}" >
+            <출력문 >
+       </c:when>
+
+
+
+-----------------[2_fmt] ex1_Encoding.jsp ,ex1_input.jsp ------------------------------------------
+
+
+-  <fmt:requestEncoding value="utf-8"/>
+     : 한글 깨짐 처리
+
+
+-----------------------ex2_numberFmt.jsp------------------------
+
+value = 1234567,8
+-세자리마다 , 추가 
+    <fmt : formatNumber value=${ num } " pattern "#,###.#"
+              : 1,234,567.8
+
+-소수점 2자리 (소수점 한자리의 경우 뒤에 0)
+   <fmt :formatNumber value=${ num } pattern="#,###.00"/>
+            : 1,234,567.80
+
+-소수점 2자리 (소수점 한자리의 경우 한자리)
+   <fmt :formatNumber value=${ num } pattern="#,###.##
+                   :1,234,567.8
+
+-  소수점 2자리 (소수점 두자리 이상의 반올림) :
+    <fmt :formatNumber value=${ num } pattern="#,###.##"
+                 :  3.15
+
+
+
+----------------------------ex3_dateFmt.jsp-------------------------------
+
+★type =
+ -time : 시간만
+ -date : 날짜 
+ - both : 전체 출력
+
+★ Style =
+  -dateStyle : 날짜 출력  short , medium , long , full
+  -timeStyle : 시간 출력 short , medium , long , full
+
+
+★ pattern=
+ -yyyy 연도 
+ -MM월
+ -dd일
+ -(E요일)
+ -hh : 12시간 기준
+ -mm :분
+ -ss : 초 
+ -HH 24시간 기준 
+
+
+
+--------------------★ 총 실습 과제 [3_emp] ★-----------------------------
+
+----------------emp.sql ----------------
+
+  -- 전체 LIST
+  -- 검색
+    SELECT * FROM EMP WHERE ENAME LIKE '%'|| UPPER ('A')|| '%'
+                    AND JOB LIKE '%' || UPPER ('E') || '%';  
+------------------EmpDto.java----------------
+매개변수 없는거 사용 못함'
+
+---------------------Emplist(서블릿)----------------------
+
+-EmpDao 생성
+-ArrayList
+ArrayList<EmpDto> emps
+
+
+forward  = "3_emp/empList.jsp"
+
+
+----------empList.jsp------------------------------------
+
+Emplist(서블릿) ArrayList emps 뿌리기 
+
+ -<c: if  = ${emps.size() != 0}
+    :emps.size가 0이 아니면
+--확장 for문
+   -<c:forEach ="{받아온emps} var ="emp" 에 넣어 >
+-이름 
+  c:if  = ${emp.sal > 2000}
+      <img src=${이미지주소}
+           :  sal 2000이상이면 hot 이미지
+   c:if = ${emp.mgr eq 0} 
+       상여가 0이면
+   color :navy 남색 으로 뿌려 
+   mgr 0이 아니면
+   그냥 ename
+
+
+

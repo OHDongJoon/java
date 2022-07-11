@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // int i = 20;
+        // i = "hello";
+        var al_pha = 20;
+        alert(1); //오류 확인을 위해 알라트 1 이렇게 넣어서 확인 1이 출력되면 여기까지는 오류가 없음
+        alert('al_pha값은' + alpha);  //고의적인오류
+        alert(2);
+        al_pha = 'hello'; //자바스크립은 '' , ""둘다됨
+        alert(3);
+        alert('바뀐 al_pha값은' + al_pha);
+        alert(4);
+
+        //오류확인 중간중간에 alert(1) , console.log() 
+    </script>
+</head>
+<body>
+    <script>
+        document.write('윗 블럭에서 선언된 변수 al_pha값은 ' + al_pha);
+    </script>
+</body>
+</html>

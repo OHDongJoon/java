@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        img{width:500px;}
+    </style>
+    <script>
+        //오전에 접속하면 오전 그림과 메세지가 오후에 접속하면 오후 그림과 메세지
+        // Date now = new Date();
+        //var date = new Date(); //현재 날짜와 시간들어감 
+        //var hour = date.getHours(); // 0~23시
+        var hour = new Date().getHours();
+        if (hour < 12) {
+            document.write('<h1>배고프다!</h1>')
+            document.write('<img src="img/am.jpg" alt="오전그림">');
+        } else {
+            document.write('<h3>집에가자!</h3>');
+            document.write('<img src="img/pm.jpg" alt="오후그림">');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

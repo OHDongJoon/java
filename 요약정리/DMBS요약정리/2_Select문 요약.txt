@@ -1,0 +1,91 @@
+[ II ] Select문 가장 많이 쓰이는 DML(데이터 조작 언어) 질의어
+
+SELECT 	: 원하는 컬럼 선택
+*         	: 테이블의 모든 column에 대한 다른 이름 부여
+alias     	: 해당 column에 대한 다른 이름 부여
+DISTINCT : 중복 행 제거 옵션
+WHERE 	: 조회되는 행을 제한하기 위한 조건추가 
+condition : column, 표현식, 상수 및 비교연산자
+ORDER BY : 정렬을 위한 옵션 (ASC:오름차순이며, default, DECS 내림차순)
+
+
+1. SQL  문장 작성법
+- SQL 문장은 대소문자를 구별하지 않습니다
+- SQL 문장은 한 줄 또는 여러 줄에 입력될 수 있습니다.
+- 절은 보통 읽고 편집하기 쉽게 줄을 나누도록 합니다.(권장)
+- 탭과 줄 넣기(들여쓰기)는 코드를 보다 읽기 쉽게 하기 위해 사용됩니다.(권장)
+- 일반적으로 키워드는 대문자로 입력합니다
+- 키워드를 제외한 다른 모든 단어, 즉 테이블 이름, 열 이름은 소문자로 입력하기도 합니다.
+- 명령어 끝은;
+- 주석처리는 --
+
+2. SQL 문장 실행
+- SELECT * FORM TAB; --scott이 소유하고 있는 table을 전부 보여줌
+	-scott(사용자)가 소유한 테이블
+
+-SELECT*FROM dept; --dept테이블 데이터 전체보기
+
+-DESC dept; -- dept테이블의 구조보기
+	-not null : null값이 있으면 안 된다 .
+	-number(4) : 부서코드는 정수 4자리
+	-number(7,2) : 총자리수 7자리 중 소수점 이하는 2자리
+
+-SELECT * FROM emp;
+-SELECT empno,ename,sal,job FROM emp;
+SELECT empno AS "사번", ename AS "직원 이름", job AS "직업" FROM emp; -- 별명 사용
+
+-SELECT empno 사번, ename 이름, job 직업 FROM emp;
+
+- SELECT empno AS NO, ename AS NAME, job FROM emp;
+
+- SELECT empno, ename, job FROM emp;
+
+3. WHERE 조건과 비교연산자 : 같다(=) , 크거나같다(>=), 작거나같다(<=), 다르다(!=)
+
+- SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL = 3000;
+- SELECT empno, ename, sal, FROM emp WHERE SAL != 3000;
+	(SAL급여가) 3000이 아닌 사람의 empno, ename, sal 출력
+
+-SQL에서 문자열이나 날짜는 반드시 작은따옴표안에 표시해야 합니다.
+-SQL문에 사용되는 키워드인 SELECT나 FROM이나 WHERE 등은 대소문자를 구 별하지 않지만
+테이블 내에 저장된 값은 대소문자를 구분하기에 'FORD' 와 'ford'는 다릅니다.
+
+4. 논리연산자
+-SELECT * FROM emp WHERE sal>=2000 AND sal <= 3000;
+ : 2000이상 3000이하인 사원정보 출력
+
+
+5. 산술표현식
+- SELECT ename, sal , sal+300 AS "올릴월급" FROM emp;
+ : 	emp 테이블의 sal을 300 증가 시키기 위해 덧셈연산자를 사용하여 
+	sal+300을 출력, 계산된 결과인 열[SAL+300]은 emp 테이블의 새로운 열이아니고 
+	단지 디스플레이를 위한 것
+
+-SELECT ename, sal, comm, sal*12 월급합, sal*12+comm 연봉 FROM emp;
+:	null 값의 처리. 행이 특정열에 대한 데이터 값이 없다면 그 값은 null이 됩니다.
+	null은 1이나 공백과는 다르다. 어떠한 datatype도 null값을 포함할 수 있으나 주키는
+	null값이 허용되지 않는다 .
+	null 값을 포함한 산술표현식 결과는 NULL이 된다. 그래서 다음과 같이 NVL함수를 이용한다.
+	-SELECT ename, sal, com, sal*12, sal*12+NVL(comm,0) FROM emp;
+
+-­ NVL(expr1, expr2) expr1은 null값을 포함하고 있는 column이나 표현식
+
+	expr2는 null변환을 위한 목표값
+
+	expr1과 expr2는 같은 타입이여야 한다
+
+­ NVL(hiredate , ‘99/01/01’) DATA형에서의 예
+
+­ NVL(job, ‘업무없음’) char형에서의 예
+
+
+
+
+-- 연습문제 
+
+
+
+
+
+
+

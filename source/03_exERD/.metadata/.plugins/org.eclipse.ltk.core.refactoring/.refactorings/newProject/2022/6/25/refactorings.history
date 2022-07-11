@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="자원 &apos;newProject/데이터베이스구현평가.exerd&apos;을(를) &apos;평가.exerd&apos;(으)로 이름 바꾸기" description="&apos;데이터베이스구현평가.exerd&apos; 자원 이름 바꾸기" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="데이터베이스구현평가.exerd" name="평가.exerd" stamp="1655267836888" updateReferences="true"/>
+</session>

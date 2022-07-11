@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var cnt = 0; // 누적횟수
+        var sum = 0; // 누적된 점수
+        var right = 0; // 점수를 제대로 입력한 횟수
+        var wrong = 0; // 점수를 제대로 입력 안 한 횟수(문자를 입력하였거나 점수구간이 아닌 수 입력)
+
+        while (confirm('누적해봐')) { //confirm 이용해서 물어보고 확인취소  , confirm : 확인을 누르면 true , 취소를 누르면 false
+
+            to = prompt('누적할점수?'); //to = prompt 이용해서 누적할 점수 물어봐     || 아무거토 입력하지않고 확인누르면 '' , 취소누르면 null
+
+            if (to != null && to != '') { //널이 아니고 빈스트링이 아닐경우
+                to = Number(to);    // 일반to를  Number 형변환해서 to에 다시 넣어주고 
+
+                if (!isNaN(to) && to >= 0 && 100 >= to) { // 문자가 아니고 to가 0~100사이 일경우 
+                    cnt++;  // 누적 횟수에 증감
+                    sum += to; // to 값 sum 점수 누적
+                    right++; // 제대로 입력한수 누적
+
+                } else { // 이놈이 문자거나 - 이거나 100이상일경우 
+                    cnt++;  // 누적횟수증가
+                    wrong++; // 잘못입력 누적
+                }
+            } else { // 널이거나 빈스트링 일경우 여기로 누적
+                cnt++; // 일단 누적횟수증가
+                wrong++; // 잘못입력도 증가 
+            }
+
+        }
+        document.write(cnt + '번 입력' + '<br>');
+        document.write('누적점수 :' + sum + '<br>');
+        document.write('점수를 제대로 입력한 횟수 :' + right +'<br>');
+        document.write('점수를 잘못 입력한 횟수 :' + wrong);
+       
+    </script>
+</head>
+<body>
+
+</body>
+</html>

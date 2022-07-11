@@ -1,0 +1,44 @@
+[6] 액션태그 ;  JSP 페이지에서 어떤 동작을 하도록 지시하는 태그.
+
+(1) 	표준액션(standard action) : JSP 페이지에서 바로 사용할 수 있는 태그
+(2) 	커스텀 액션(custom action) : 별도의 라이브러리를 설치해야만 사용할 수 있는 태그
+
+표준 액션과 커스텀 액션은 태그 안에 사용하는 접두어가 다르기 때문에 외형상으로 쉽게 구분할 수 있다. 표준 액션에는 모든 태그의 이름 앞에 jsp라는 접두어가 붙고, 커스텀 액션에는 그 밖의 접두어가 붙는다.
+<jsp:~> 표준액션임을 표시하는 접두어
+<c:set ~> 커스텀 액션 중 하나임을 표시하는 접두어
+
+
+1. 액션태그 ; 액션 태그는 XML 문법을 따르므로 단독 태그 일 경우에는
+반드시 '/>' 로 끝나도록 만들어야 한다 
+
+- 페이지 모듈화와 요청 흐름 제어 역할
+-JSP 페이지 내에서 어떤 동작을 하도록 지시하는 태그 . 예를 들어 페이지 이동.
+페이지 include 뒤에 나올 자바빈에 관련된 태그도 있다 .
+s
+ex1_forward.jsp
+■ forward : 현재의 페이지에서 다른 특정페이지로 전환할 때 사용. 단 URL은 변하지 않는다.
+ URL과 페이지 내용이 상이하다.
+ request객체는 그대로. ?=값 그대로 넘어감
+
+!!sendRedirect 는  파라미터가 전달 안됨 request는 새롭게 만드는거여서
+{
+String n = request.getParameter("n");
+	response.sendRedirect("ex2_forward.jsp?n="+n);
+}
+하나는 괜찮은데 많으면 이렇게 하기 귀찮아서 
+
+ex3_param_forward.jsp
+■ Param : forward 및 include 태그에 데이터 전달을 목적으로 사용되는 태그. 이름과 값으로 구성.
+
+
+
+
+ex5_include 
+WebContent 밑에 css 폴더 생성
+■ include : 현재 페이지에 다른 페이지를 삽입할 때 사용 <%@ include file=”copyright.html”>과 유사. 중복 영역을 처리하는데 사용된다.
+<jsp:include>는 따로 따로 컴파일 <%@ include~은 하나로 컴파일 된다
+
+-include file="includePage.jsp" %> <!-- jsp 파일 원본 그대로 include
+- <jsp:include page="includePage.jsp"/> <!-- jsp 파일의 결과를 include -->
+
+ex6_param_include.jsp

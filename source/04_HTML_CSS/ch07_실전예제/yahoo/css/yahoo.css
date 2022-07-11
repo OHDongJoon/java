@@ -1,0 +1,247 @@
+﻿@font-face {
+    font-family: 'Amarante-Regular';
+    src: url('../font/Amarante-Regular.ttf')
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amarante-Regular',srif;
+}
+li{list-style:none;}
+a{text-decoration:none;}
+
+
+
+#header{
+  
+}
+    #header #header_nav {
+        width: 100%;
+        min-width: 900px;
+        height: 25px;
+        line-height: 25px;
+        overflow: hidden;
+        background-color: purple;
+        border: 1px solid black;
+        margin: 0 auto;
+       
+    }
+        #header #header_nav .gnb {
+           
+        }
+#header #header_nav .gnb ul{
+  
+}
+    #header #header_nav .gnb ul li {
+        float: left;
+        border: 1px solid gray;
+        margin-left:10px;
+    }
+        #header #header_nav .gnb ul li a {
+            color: white;
+            text-align: center;
+           
+        }
+
+
+
+#header #header_nav .survivalFootball{
+}
+    #header #header_nav .survivalFootball p {
+   
+        color: white;
+        float: right;
+    }
+    #header #header_nav .survivalFootball img {
+    width:20px;
+    height:20px;
+    }
+/* header -> header_nav  끝*/
+
+#header #header_info{
+    overflow : hidden;
+    width:1000px;
+    margin:0 auto;
+    text-align:center;
+}
+#header #header_info .logo{ /*yahoo 로고 */
+    float : left;
+    margin-left :100px;
+}
+#header #header_info .logo a{}
+#header #header_info .logo a img{}
+
+#header #header_info .search{
+    float : left;
+    text-align : center;
+    margin-left :30px;
+    border : 1px solid red;
+    margin : 20px 3px 20px 10px;
+}
+#header #header_info .search input[type=text]{
+    width:400px;
+    height :20px;
+}
+    #header #header_info .search input[type=submit] {
+        background-image: url('../img/search_btn.png')
+    }
+
+
+    #header #header_info .service ul li { /*service 메뉴 3개*/
+        float: right;
+        margin: 25px 70px 25px 10px;
+        line-height: 100%;
+        text-align: center;
+    }
+#header #header_info .service ul li a{
+    color : purple;
+}
+
+
+#content {
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+}
+    #content #main_menu { /*main menu 아이콘*/
+        float: left;
+        border: 1px solid red;
+        width: 155px;
+        height: 500px;
+        text-align:center;
+        line-height : 100%;
+        
+        
+    }
+
+#content #main_menu ul{}
+#content #main_menu ul li{
+    margin : 30px;
+}
+#content #main_menu ul li p{}
+
+
+    #content #main {
+        border: 1px solid red;
+        float: left;
+        width: 600px;
+    }
+
+#content #main #main1{
+    width:600px;
+    height : 300px;
+    border : 1px solid  lightgray;
+    margin : 5px 0  5px 0; 
+}
+#content #main #main1 p{}
+/*main 1 끝 */
+
+
+        #content #main #main2 {
+            
+            height: 150px;
+            border: 1px solid lightgray;
+            margin : 0 0 5px 0;
+        }
+#content #main #main2 p{}
+
+#content #main #main3 {
+    height :50px;
+    
+    border : 1px solid lightgray;
+    background-color :purple;
+}
+#content #main #main3 ul{
+    overflow :hidden;
+}
+#content #main #main3 ul li{
+    float : left;
+    text-align :center;
+    width :100px;
+    height : 50px;
+    line-height :50px;
+
+}
+#content #main #main3 ul li a{
+    color:white;
+    
+}
+
+        #content #main #main4, #content #main #main5,
+        #content #main #main6, #content #main #main7 {
+            width: 600px;
+            height: 100px;
+            border: 1px solid lightgray;
+        }
+#content #main #main4 p,#content #main #main5 p,
+#content #main #main6 p,#content #main #main7 p{
+
+}
+/*content min 1234567 끝*/
+
+    #content #main_banner {
+        width: 230px;
+        float: left;
+        margin: 0 5px 5px 5px;
+    }
+    #content #main_banner #banner1 { /*git search word*/
+      
+      height:100px;
+      width :230px;
+        border: 1px solid lightgray;
+    }
+#content #main_banner #banner1 p{}
+
+        #content #main_banner #banner2 {
+            height: 100px;
+            width: 230px;
+            border: 1px solid lightgray;
+        }
+#content #main_banner #banner2 p{}
+
+#content #main_banner #banner3{ /*ad2*/
+    height:150px;
+      width :230px;
+        border: 1px solid lightgray;
+}
+#content #main_banner #banner3 p{}
+
+        #content #main_banner #banner4 {
+            height: 150px;
+            width: 230px;
+            border: 1px solid lightgray;
+        }
+#content #main_banner #banner4 p{}
+
+        #content #main_banner #banner5 {
+            height:200px;
+            width: 230px;
+            border: 1px solid lightgray;
+        }
+#content #main_banner #banner5 p{}
+
+
+/*content 끝*/
+
+#footer {
+    width: 1000px;
+    margin: 0 auto;
+    height: 100px;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+}
+    #footer ul {
+        overflow: hidden;
+       
+    }
+#footer ul li{
+    float:left;
+    
+}
+#footer ul li img{
+     text-align :center;
+     line-height :100%;
+    
+}

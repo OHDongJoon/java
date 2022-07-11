@@ -1,0 +1,128 @@
+글번호 : fnum
+
+★ ★ ★ fboardList.jsp ★ ★ ★
+ - session.get("customer")  != null ){
+    <a href="글쓰기.jsp" }  로그인 후 글쓰기 나오게
+- pageNum 받고 null 이면 1로 설정 
+
+-페이징 변수 설정
+-dao.getInstance 
+
+!!! 답변글 
+  getFre_level() > 0 ) 0보다 크면 답변글 {
+    들여쓰기 ...  }
+
+-<a href="상세보기".jsp? 글번호 , 페지이지번호 >
+        같이 넘기고 getFsubject() 누르면 상세보기   </a>
+- Ffilename != null 이아니면 
+    (첨부파일이 있으면 이미지파일 넣기) 
+
+★ ★ ★ fboardContent.jsp ★ ★ ★
+
+-- pageNum 받기 
+- fnum 받기 
+- 조회수함수 호출 hitUp(fnum)
+- 글상세보기 함수 호출 getBoard
+
+- 첨부파일
+   getFfilename == null { 첨푸파일 널이면
+       "없다 뿌리고 "
+
+}esle{
+   ../첨푸파일저장공간/ + get파일이름()>
+
+
+로그인전 : 목록 , 삭제 
+로그인후 : 목록 , 수정 , 답변, 삭제 
+
+<% 
+  String cid = null;
+   세션 customer 받아오고 
+     customer != null 이 아니면 
+        cid = customer.getCid() 받아와 
+  if(fbDto.getcid랑 equals(위에cid) 같으면{
+     수정 버튼 
+ customer !=null{ 커스터머가 널이 아니면
+       답변 버튼
+그외
+   로그인 안해도 삭제비번 알면 가능하게 버튼
+    
+★ ★ ★ fboardDeleteForm.jsp ★ ★ ★
+-pageNum 받기
+-fnum 받기
+ <caption <%=fnum%> 번글 삭제 </capqtion>
+
+-히든
+   -pageNum , fnum
+-submit 누르면 pro.jsp 슝~
+
+★ ★ ★ fboardDeletePro.jsp ★ ★ ★
+-pageNum 
+-fnum
+- 삭제용비번 fpw  , 로그인 비번은 cpw 야 여기서 안써
+-삭제 함수 호출  deletBoard(fnum, fpw) 호출
+
+      
+★ ★ ★ fboardUpdateForm.jsp ★ ★ ★  
+-pageNum
+-fnum
+-getBoard(fnum) 글수정 함수 호출 
+ {-- 히든 
+    pageNum , dbfilename (첨부파일이름) }
+-submit 글수정 -> fboardUpdatePro.jsp
+-reset 이전 전페이지로 
+-button 목록 onclick = location = fboardList.jsp?pageNum>
+
+
+★ ★ ★ fboardUpdatePro.jsp ★ ★ ★   
+
+- String path = request.getRealPath("파일저장폴더")
+   -String ffilenmae = null
+       : 첨부파일이 서버에 저장된 이름
+   -mRequest = new 생성 
+
+         -Enumeration<String> params = mRequest.getFileNames();
+               :받아온 파일 네임 params에 넣어
+           
+      -String param = mRequest.getFilesystemName(param)
+                 -ffilename = mRequest.getFilesystemName(param)
+-- 파리미터 정보들 get 순서대로
+  -히든
+     pageNum , dbfilename
+-일반
+   -ffilename = (ffilename==null)? 아니면 dbfilename : 참 ffilename;
+       -저장된 파일 있으면 dbfilename 아니면 일반 ffilename 
+-updateBoard(fbDto) 호출
+
+★ ★ ★ fboardWriteForm.jsp ★ ★ ★ 
+-fboardWriteForm.jsp => 원글쓰기
+-fboardWriteForm.jsp? fnum=9&pageNum=1 
+     :답변글 쓰기 
+
+-session.get (customer가 널이면)
+   response.로그인폼 슝  = 로그인전 이니까 로그인 하세욧
+-pageNum == null ) pageNum="1";
+     새글 1로 설정
+-fnum = 0 초기화
+
+-if(받아온 "fnum"이 null이 아니면) : 답글 쓰러왔어욤
+  -받아온 fnum = integer 형변환
+  
+}-----------------------
+<form >
+-히든
+  -pageNum(위에서받아옴)
+  -fnum(위에서받아옴)
+  -fbDto.getFref(애부터는 get)
+  -fbDto.getFre_step
+  -fbDto.getFre_level()
+
+fnum==0? 이면 "글쓰기" : 아니면 "답변글쓰기"
+
+★ ★ ★ fboardWritePro.jsp ★ ★ ★ 
+업뎃 프로랑 같음
+----
+-if(fnum==0)
+   원글쓰기 insertBoard();
+-else{
+    답글쓰기 reply();  

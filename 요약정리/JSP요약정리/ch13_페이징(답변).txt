@@ -1,0 +1,94 @@
+pageNum : 현재 몇 페이지인지(String)
+
+currentPage : 현재 몇 페이지인지(int)
+
+startRow : 시작번호   
+	- (페이지번호(pagenum) -1) * 페이지당 갯수 -1
+
+endRow : 끝번호
+	-시작번호 + 페이지당갯수 -1 
+
+pageCnt : 전체 페이지수 
+	Math.ceil((double)전체글갯수/페이지당 글 갯수)
+
+블록수 : Math.ceil(페이지당갯수/블록당 페이지갯수)
+
+PAGESIZE : 한 페이지당 글 수 : 10개
+
+BLOCKSIZE : 블록당 페이지 수 : 10개
+
+startPage : 시작페이지 
+	- ((현재페이지 -1)/블록당페이지수)*블록당페이지수
+
+
+endPage : 끝페이지
+	- 시작페이지 + 블록당페이지 수 -1
+
+--- list.jsp
+listBoard(글목록): top n 변경
+list.jsp ||  list.jsp?pageNum=11 || list.jsp?pageNum=1 
+ 이렇게 호출 할 수 있다
+
+★원래 목록(list.jsp)에서 상세보기, 수정, 삭제 후 다시 원래 목록(list.jsp)으로 돌아가기★★★
+--list.jsp
+1.pageNum  request.getParameter추가
+
+-- content.jsp ---
+버튼에 <%=pageNum%> 수정, 삭제에 같이넘기기 
+
+-- Form에서 Pro 넘기고 완료 되면 list로 다시 컴백
+-- Form.jsp 에서는 
+1.추가 String pageNum = request.getParameter("pageNum");
+2. hidden 으로 pageNum 넘기고
+
+--Pro에서는
+1.pageNum  request.getParameter추가
+2. 수정 삭제 완료 후 ektl list.jsp에 원래 목록으로 가기 
+location.href = 'list.jsp?pageNum=<%=pageNum%>';
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+★ 답변글 
+--content
+-그냥 넘기면 원글작성이고
+-num 이랑 pageNum 같이 해야 원글에대한답변
+버튼 답변 href = writeForm <%=num%>&pageNum=<%=pageNum%>
+out.print에 getNum() , &pageNum = +pageNum 추가 
+
+writeForm 으로 ~ 
+if (pageNum=null{
+-이쪽으로 pageNum 이 널이 들어오면 원글 다시 넘겨줄때는 1로 넘겨줌
+}
+if(num이 널이 아니면) 
+dto = dao.getBoardOnline(num); num에 원글 정보  저장
+   	dto.getRef , dto.getRe_step , dto.getRe_indent 뿌려
+ int num = 0; 초기화 
+   - num이 null 이면 원글, null 이 아니면 답변
+
+원글은 pageNum 0으로 들어옴 
+   - 만약에 pageNum이 null 이면 
+   pageNum= "1" 로 설 정
+
+num이 null이 아니면 애는 답변글 
+
+-hidden으로 value랑 같이 넘기기 
+   -pageNum  
+   -num
+   -ref
+  -re_step
+  -re_indent 
+
+-제목에 
+  (dto.getSubject()  가 null 이 아니면 답변글 )
+   out.print(dto.getSubject();
+
+
+writePro 으로~~~~~
+-getNum 추가
+BoardDao dao = BoardDao.getInstance();
+   if(dto.getNum()==0{  넘이 0이면 
+	   result = dao.insertBoard(dto) 원글쓰기 함수 호출
+   else { 넘이 0 이 아니야 
+	result = dao.reqly(dto) 답변글 쓰기 함수
+}
+ if (result == BoardDao.SUCCESS) { 원글이든 답변이든 성공하면 result에 넘겨!
+

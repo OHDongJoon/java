@@ -1,0 +1,12 @@
+1단계 Class.forName(driver)
+- 예외 처리
+
+2단계 
+conn = DriverManager.getConnection(url,"scott", "tiger");
+접속 앤 캐치절 추가 
+
+3단계
+stmt = conn.createStatement(); //   3 전송할 객체 생성
+
+4, 5 
+int result = stmt.executeUpdate(sql); //

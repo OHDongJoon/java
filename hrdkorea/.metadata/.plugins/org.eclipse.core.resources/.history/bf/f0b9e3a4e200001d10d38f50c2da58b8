@@ -1,0 +1,15 @@
+package com.lec.dto;
+
+import java.sql.Date;
+
+public class SalesDto {
+	private int custno;
+	private int selenol;
+	private int pcost;
+	private int amount;
+	private int price;
+	private int pcode;
+	private Date sdate;
+	public SalesDto() {}
+	
+}

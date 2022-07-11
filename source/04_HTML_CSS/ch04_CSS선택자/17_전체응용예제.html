@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+       div#header {
+            height: 150px;
+            width: 1000px;
+            overflow:hidden;
+        }
+        div#header .left {
+            height: 150px;
+            width: 150px;
+            border: 1px solid gray;
+            background-color: lightgray;
+            float: left;
+            border-radius: 20px 0;
+        }
+
+        div#header .center {
+            height: 150px;
+            width: 693px;
+            border: 1px solid gray;
+            background-color: lightgray;
+            float: left;
+            border-radius: 0 0 20px 20px;
+        }
+        div#header .right {
+            height: 150px;
+            width: 150px;
+            border: 1px solid gray;
+            background-color: lightgray;
+            float: left;
+            border-radius:0 0 0 20px;
+        }
+
+        div#content {
+            height: 300px;
+            width: 1000px;
+            overflow: hidden;
+        }
+            div#content .left {
+                height: 300px;
+                width: 150px;
+                border: 1px solid gray;
+                background-color: lightgray;
+                float: left;
+                border-radius: 0 20px 20px 0;
+            }
+            div#content .center {
+                height: 300px;
+                width: 693px;
+                border: 1px solid gray;
+                background-color: lightgray;
+                float: left;
+                border-radius: 20px 20px 20px 20px;
+            }
+            div#content .right {
+                height: 300px;
+                width: 150px;
+                border: 1px solid gray;
+                background-color: lightgray;
+                float: left;
+                border-radius: 20px 0 0 20px;
+            }
+        div#footer {
+            height: 150px;
+            width: 1000px;
+            overflow: hidden;
+        }
+            div#footer .left {
+                height: 150px;
+                width: 150px;
+                border: 1px solid gray;
+                background-color: lightgray;
+                float: left;
+                border-radius: 0 20px;
+            }
+            div#footer .center {
+                height: 150px;
+                width: 693px;
+                border: 1px solid gray;
+                background-color: lightgray;
+                float: left;
+                border-radius: 20px 20px 0 0;
+            }
+            div#footer .right {
+                height: 150px;
+                width: 150px;
+                border: 1px solid gray;
+                background-color: lightgray;
+                float: left;
+                border-radius: 20px 0 0 0;
+            }
+        div#content #nav ul {overflow:hidden;}
+            div#content #nav ul li {
+                float: left;
+                list-style: none;
+                width: 30%;
+                font-weight:bold;
+                font-size:32px;
+                margin: 0 auto;
+                text-align: center;
+              
+            }
+           
+        div#academy h2 {
+            text-align: center;
+        }
+        div#academy p{
+            text-align: center;
+        }
+        div#content .right ol li:nth-child(9)~li {
+           color :red;
+        }
+        
+       
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+    <div id="content">
+        <div class="left"></div>
+        <div class="center">
+            <div id="nav">
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                </ul>
+                <div id="academy">
+                    <h2>자바 개발자 양성과정</h2>
+                    <p>
+                        얼음 피에 보배를 위하여 , 타오르고 오직 눈에 아니다 . 맺어 아름답고 굳세게 현저하게
+                        인간이 투명하되 우는 우리의 칼이다. 오아시스도 이상 열락의 이상은 품에 구할보내는 끓는다.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="right">
+            <ol>
+                <li>태그</li>
+                <li>전체</li>
+                <li>id,class</li>
+                <li>속성</li>
+                <li>후손,자손(>)</li>
+                <li>동위</li>
+                <li>반응</li>
+                <li>상태</li>
+                <li>구조</li>
+                <li>문자</li>
+                <li>링크</li>
+                <li>부정</li>
+            </ol>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+
+    </div>
+</body>
+</html>

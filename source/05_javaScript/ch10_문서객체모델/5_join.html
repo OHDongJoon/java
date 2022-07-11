@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        form{
+            text-align:center;
+        }
+    </style>
+    <script>
+        function conOpen() {
+            var con = open('5_confirm.html', ' ', 'width=600, height=700, left = 100');
+            if (!con) {
+                alert('팝업 차단 해제해 주세요');
+            }
+            idConfirmed.value = 1;
+        }
+        function chk() {
+            if (idConfirmed.value != 1) {
+                alert('ID를 중복확인하셔야 회원가입 가능 합니다');
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+  <form onsubmit="return chk()">
+      <input type="hidden" name="idConfirmed" id="idConfirmed" value="0" />
+     <p>
+      아이디<input type="text" id="id" /> 
+        <input type="button" onclick="conOpen();" value="중복확인"></p>
+      <p>
+          <input type="submit" value="회원가입" />
+      </p>
+  </form>
+</body>
+</html>

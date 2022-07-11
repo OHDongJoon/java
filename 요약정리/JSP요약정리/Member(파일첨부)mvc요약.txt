@@ -1,0 +1,52 @@
+★  ★  ★  ★  ★  ★    회원가입    join.jsp    ★ ★ ★ ★★
+-파일첨부를 위해 
+   -method : post 
+   - enctype : multipart/form-data
+ 아이디 , 비번, 이름 ,메일, 포토 , 생일, 주소 
+회원가입 버튼 누르면 join.do 실행 
+★  ★  ★  ★  ★  ★        join.do    ★ ★ ★ ★★
+              ------new MJoinService-------
+-path : 저장 파일 지정
+-maxSize 설정
+-MultipartRequest 생성
+-파일이 하나만 들어오니 while 생략
+
+@ mRequest을 이용하여 파라미터 받아와서 DB 저장
+ -생일
+   String mbirthStr = ("mbirth") 
+      null 일 수도 있으니 string 으로 받아오고 
+-Date 형변환
+  Date mbirth = null ;
+    if( mbirthStr.이 "" dkslaus {
+     mbirth = Date.valueOf(mbirthStr);
+-사진
+  mphoto = mpoto가 널이냐 ? "노이미지" : mphoto
+--회원가입 
+    result = mDao.joinMember(member); 회원가입 함수호출
+--회원가입 성공 세션 생성
+   if(result == memberDao.success 이냐 ? { 
+     HttpSession session = request . getSession() ; 
+         세션은 request 로 부터 
+    session.setAttrebute("mid" mid) 
+    request.setAttribute("joinResult" "회원가입성공)
+ }else{
+    회원가입  실패 "joinErrorMst"
+@ 서버에 업로드된 파일을 소스폴더로 복사 
+serverFile.exists : 파일이 존재하냐 ?
+- 서버에 업로드된 파일을 소스폴더로 복사 
+
+ ------  ------  ------  ------  ------  ------  ------ 
+실행후 loginView.do 로가라 
+
+★  ★  ★  ★  ★  ★    로그인   login    ★ ★ ★
+login.jsp
+ ${requestsScope.joinResult 회원가입이 완료}
+   -not empty joinResult
+ ${requestScope.joinErrorMsg 회원가입 에러 }
+  -not empty joinErrorMsg
+ ${sessionScope.mid 회원가입 완료 id}
+
+
+-회원가입후 id 있으면 id 뿌리기
+-로그인 버튼 누르면 action = "login.do"가!
+-버튼 회원가입 onclick ="joinView.do" 가 !

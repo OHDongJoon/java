@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <!-- 구글 주소     아무거나 써도 상관 없음<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+ <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script>
+      $(document).ready(function(){
+    	  //jQuery 소스
+    	  $('#p1').click(function(){// p1을 클릭하면
+    		  $(this).html("<b>태그가 내용 바뀜</b>"); // 내자신 this.mtl ㅇ을 바꾸겠다
+    		  //$('#p1').html("<b>태그가 내용바뀜</b>");
+    	  }); 
+      });
+       
+     </script>
+</head>
+<body>
+   <p id="p1">p태그 하나</p>
+   
+</body>
+</html>

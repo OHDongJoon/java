@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=2.0"/>
+    <title></title>
+    <!--인터넷 링크-->
+<style>
+/* * *페이지 초기화* * */
+*{padding:0; margin:0;
+font-family:'Gill Sans','Gill Sans MT'
+}
+li{list-style:none;}
+ a{text-decoration:none;}
+
+/*************header****************/
+ header{
+ background-color : #ea8f00;
+height : 100px;
+}
+
+
+
+        /*************header #logo_wrap****************/
+header #logo_wrap{ /* 50 씩 나눔*/
+height:50px;
+line-height :50px;
+text-align : center;
+position : relative; /*삼지창 mobile logo 사람 밖으로못가게*/
+}
+ 
+header #logo_wrap img.menu{position:absolute; top:0; left:10px;}
+header #logo_wrap img.myinfo{position:absolute; top:0; right:10px;}
+header #logo_wrap a.logo{color:#ffffff; /*하얀색 white*/}
+        /*************header #search****************/
+header #search{
+height:50px; position:relative; /*돋보기이미지를 #search안에*/
+ }
+
+header #search input[type='text']{
+    width : 100%; height:50px;
+    border :3px solid #ea8f00;
+    box-sizing : border-box;  /*스마트폰 에서 필수*/
+    padding:5px 55px 5px 5px; /*오른쪽에 55px 주면서 돋보기 공간 만들기*/
+    font-size:1.3em;
+    outline : 0; /*검색창 클릭했을때 검은색 보더 안생기가 아웃 라윈~ 에야~*/
+}
+header #search input[type='submit']{
+    width:50px;
+    height:50px;
+    background : url('imgEx2/search.png');
+    border :0; outline:0;
+    position : absolute;  
+    top:0; 
+    right:0px; /*포지션 잡기*/
+}
+ /********************* #lnb **************/
+ #lnb ul{
+     overflow :hidden;
+     margin:5px 0; /*위아래 여백만 5px */
+ }
+ #lnb ul li{
+     float :left;
+     width:16.666666%;
+     text-align:center;
+     border-right : 2px solid #ea8f00;
+     box-sizing:border-box ; /*100 안넘어가게 설정*/
+     font-size : 1.3em;
+ }
+ #lnb ul li:last-child{border :0;}
+ #lnb ul li a{color:blue;}
+
+    /********************* #section1 **************/
+    #section1 .row1,#section1 .row2, #section1 .row3{overflow:hidden;}
+    .row1 div, .row2 div, .row3 div{
+        float:left;
+        width:50%;
+        height:130px;
+        border:2px solid white;
+        box-sizing:border-box;
+    }
+    #section1 img {
+        width:100%; /*sectio1 밑에 있는 img들은 부모의 width를 100퍼 써라*/
+        height:100%; /*section1 밑에있는 img들은 부모의 height 100퍼 써라*/
+
+    }
+    
+    /********************* #section2 **************/
+    #section2 {margin:5px;}
+    #section2 ul li{
+        border :1px solid lightgray;
+        padding : 8px;
+        /***   말줄임 태그****/
+        white-space : nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+    
+    /********************* #section3 **************/
+    #section3 ul li{
+        border:1px solid lightgray;
+        margin : 5px; padding:5px;
+        height : 120px;
+        position :relative;
+    }
+    #section3 ul li p.img{
+        position :absolute;
+        top:15px; left :15px;
+    }
+    #section3 ul li p.txt{
+        width:100%-100px;
+        padding:5px 5px 5px 120px;
+    }
+    #section3 ul li p.txt span:first-child{
+        display : block; /*한줄만나오게*/
+        /*말줄임태그*/
+         white-space : nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        font-size:1.2em;
+        font-weight:bold;
+        color:darkblue;
+    }
+    /**********footer*******/
+    footer{
+        background-color : #ea8f00;
+        text-align:center; /*글씨와 이미지를 가운데 정렬*/
+    }
+    footer p:last-child{ font-size: .8em;
+                         padding-bottom : 5px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div id="logo_wrap">
+     <img src="imgEx2/menu.png" class="menu" alt="메뉴 아이콘" />
+     <a href="ex2.html" class="logo"><h3>mobile logo</h3></a>
+     <img src="imgEx2/myinfo.png" class="myinfo" alt="내정보 아이콘" />
+    </div>
+
+    <div id="search">
+           <form action="#">
+               <input type="text" name="query_word" />
+               <input type="submit" value="" />
+           </form>
+       </div>
+</header> <!-- header 끝-->
+
+<div id="lnb">
+    <ul>
+        <li><a href="#lnb1">lnb1</a></li>
+        <li><a href="#lnb2">lnb2</a></li>
+        <li><a href="#lnb3">lnb3</a></li>
+        <li><a href="#lnb4">lnb4</a></li>
+        <li><a href="#lnb5">lnb5</a></li>
+        <li><a href="#lnb6">lnb6</a></li>
+    </ul>
+</div> <!--lnb 끝-->
+
+<section>
+    <div id="section1">
+        <div class="row1">
+            <div><!--1행1열-->
+                <a href="https://blog.naver.com/kusf_sport/220323256673">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150407_59%2Fkusf_sport_1428372163423VK1Q8_JPEG%2FIMG_5919.jpg&type=sc960_832" alt="1행1열기사"/>
+                </a>
+            </div> <!--1행1열-->
+
+            <div> <!--1행2열-->
+                <a href="https://blog.naver.com/lob_fullbase/220762770443">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20160715_60%2Flob_fullbase_1468548576543Mj77f_JPEG%2FIMG_1237.JPG&type=sc960_832" alt="1행2열 기사" />
+                </a>
+            </div> <!--1행2열-->
+        </div> <!--row1-->
+
+        <div class="row2">
+            <div>
+                <a href="https://blog.naver.com/bernouihotel/220811030163">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20160912_150%2Fbernouihotel_1473657329616jqHlF_JPEG%2F%25B5%25BF%25BE%25C6%25B4%25EB%25C7%25D0%25B1%25B3%25BF%25EC%25BD%25C2.jpg&type=a340" alt="2행1열 기사"/>
+                </a>
+            </div>
+
+            <div>
+                <a href="https://blog.naver.com/kusf_sport/220204324078">
+                    <img src= "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20141208_198%2Fkusf_sport_1418041254440cJLDw_JPEG%2F%25C1%25A6%25B8%25F1-%25BE%25F8%25C0%25BD-1.jpg&type=a340" alt="2행2열기사"/>
+                </a>
+            </div>
+        </div> <!--row2-->
+
+        <div class="row3">
+            <div>
+                <a href="https://sports.news.naver.com/news?oid=529&aid=0000062819">
+                    <img src="https://imgnews.pstatic.net/image/529/2022/05/10/0000062819_001_20220510100401779.png?type=w647" alt="3행1열 기사" />
+                </a>
+            </div>
+
+            <div>
+                <a href="https://sports.news.naver.com/news?oid=529&aid=0000062819">
+                    <img src="https://imgnews.pstatic.net/image/529/2022/05/10/0000062819_001_20220510100401779.png?type=w647" alt="3행1열기사" />
+                </a>
+            </div>
+        </div> <!--row3-->
+
+    </div> <!-- #section1 3행 2열 기사 이미지아 alink-->
+    <div id="section2">
+        <ul>
+            <li>
+                <a href="https://n.news.naver.com/mnews/article/277/0005086413?sid=105">ZDNet Korea NHN, 1분기 영업익 155억...</a>
+            </li>
+            <li>
+             <a href="https://n.news.naver.com/mnews/article/277/0005086413?sid=105">연합뉴스노벨화학상 수상자 "</a>
+            </li>
+            <li>
+                <a href="http://news.heraldcorp.com/sports/view.php?ud=201412071721155599074_1&md=_BL">[2014 야구대제전] ‘14안타 9득점’ 성남고, 충암고 꺾고 16강 진출[2014 야구대제전] ‘14안타 9득점’ 성남고, 충암고 꺾고 16강 진출[2014 야구대제전] ‘14안타 9득점’ 성남고, 충암고 꺾고 16강 진출</a>
+            </li>
+            <li>
+                <a href="https://n.news.naver.com/mnews/article/277/0005086413?sid=105"></a>
+            </li>
+        </ul>
+    
+     </div> <!--#section2 : 기사 해드라인 list와 alink-->
+    
+    <div id="section3">
+       <ul>
+           <li>
+               <p class="img">
+                   <img src="https://via.placeholder.com/100x100" />
+               </p>
+               <p class="txt">
+                   <span>첫번째 span부분은 말줄임 할 예정입니다. 길면 말줄임태그 효과가 보이고 짧으면 효과가 안 보임</span>
+                   <span>두번쩨 span부분은 다나와. 그래서 2줄이상이 되기도 하죠 ㅎㅎ.</span>
+               </p>
+           </li>
+           <li>
+               <p class="img">
+                   <img src="https://via.placeholder.com/100x100" />
+               </p>
+               <p class="txt">
+                   <span>첫번째 span부분은 말줄임 할 예정입니다. </span>
+                   <span>두번쩨 span부분은 다나와. 그래서 2줄이상이 되기도 하죠 ㅎㅎ.</span>
+               </p>
+           </li>
+       </ul>
+        
+    </div> <!--#section3 : 100x100 이미지와 가변길이 -->
+</section>
+
+<footer>
+    <p><img src="imgEx2/logo.png" alt="회사로고" /></p>
+    <p>서울시 강남구 논현동 언주로 605 207호</p>
+</footer>
+
+</body>
+</html>

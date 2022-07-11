@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // width 가로길이 
+        // height 세로길이
+        //left 왼쪽에서 얼마나 떨어트릴지
+        //top 위에서 얼마나 떨어트릴지
+        var child = open(' ', ' ', 'width=450, height=500 , left=100, top=100');
+        /*open(속성1, 속성2, 속성3)
+         * 속성 1 : 열릴 새창의 url
+         * 속성 2 : 윈도우의 이름
+         * 속성 3 : width,height , left , top ....꼭 넣어주기 
+         * */
+        if (child) {
+            child.document.write('<h2>새창</h2>'); // 새창열린거야 
+        } else { // 창안열림 팝업차단 
+            alert('팝업차단 풀어아 진영아 !');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

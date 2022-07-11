@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        form{
+            text-align :center;
+        }
+    </style>
+    <script>
+        var modifyName;
+        window.onload = function () {
+            var id = opener.document.getElementById('id').value;
+
+            modifyName = document.getElementById('modifyName');
+            modifyName.setAttribute('value', id);
+        }
+        function sendData() {
+            opener.document.getElementById('id').value = modifyName.value;
+            close();
+           
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            ID<input type="text" id="modifyName" />
+            <input type="button" value="제출" />
+        </p>
+        <p>
+            <input type="button" onclick ="sendData();" value="아이디사용" />
+            
+        </p>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var s = { name: '홍길동', kor: 99, mat: 90, eng: 98, sci: 100 };
+        var s = makeStudent('홍길동', 99, 90, 98, 100);
+        
+        function makeStudent(name, kor, mat, eng, sci) {
+            var resultObj = {
+                name: name,
+                kor: kor,
+                mat: mat,
+                eng: eng,
+                sci: sci,
+                getSum: function () {
+                    return this.kor + this.mat + this.eng + this.sci;
+                },
+                getAvg: function () {
+                    return this.getSum() / 4;
+                },
+                toString: function () {
+                    var output = ' '; // 아무것도 없는 빈스트링 초기화
+                    for (var key in this) {
+                        if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                            output += key + ' : ' + this[key] + '<br>';
+                        } else if (key == 'getSum' || key == 'getAvg') {
+                            // substring(3) : 3번째 인덱스 부터 끝가지
+                            output += key.substring(3).toUpperCase() + ' : ' + this[key]() + '<br>';
+                        } // if
+
+                    } //for
+                    return output;
+                },
+            };
+            return resultObj;
+                } //function 
+                var students = [];
+                students.push(makeStudent('홍길동', 100, 100, 100, 100));
+                students.push(makeStudent('유길동', 100, 100, 100, 100));
+        students.push(makeStudent('마길동', 100, 100, 100, 100));
+
+        students.forEach(function (data, idx) { //students 에 인덱스를 idx 받고 그 값을 data에 돌려
+            document.write(idx + '번째 : <br>' + data + '<hr>');
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

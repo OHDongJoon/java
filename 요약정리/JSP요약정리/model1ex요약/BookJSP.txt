@@ -1,0 +1,71 @@
+★ ★ bookList.jsp
+   -pageNum 받기
+   -pageNum ==null 이면 1설정 (새글)
+   currentPage = pageNum 현재페이지
+   ArrayList .listBook(책목록)함수호출
+ <a 
+책, 책제목 누르면 
+      bookContent 넘어가는데
+         get(i).getBid , pageNum 같이넘기기
+  a>
+   -paging 처리 
+
+★ ★ bookContent.jsp 상세보기 
+  -int bid Integer.parseInt(request.getParameter("bid")
+  -pageNum 받아오기
+  -책상세보기 함수 호출 getBook(bid)
+  -이미지1 , 이미지2 출력
+
+★ ★ bookRegister.jsp 책등록
+ 책등록 submit 누르면 Pro 슝~
+
+★ ★ bookRegisterPro.jsp
+    - 한글처리
+       -저장변수 path = request.getRealPath ("bookImg")
+           -String[] image ={"",""} 두개 들어오니 배열
+                
+-MultipartRequest mRequest = null;
+                      *파일 선택 안할 수도 있으니 try 밖에
+
+try{
+    mRequest = new MultipartRequest ();
+          new DefaultFileRenamePolicy : 같은파일 이름다르게 함수
+-Enumeration<String> paramNames =
+            mRequest.getFileNames(); : 파라미터 이름들
+
+int idx = 0; 초기화
+
+몇개가 올지 모르니 
+          while(paramNames.hasMoreElements  가져올거 있어? 그럼가져와
+                   String param = paramNames.nextElement(); // 파라미터 가져가져와
+                              image[idx] =mRequest.getFilesystemName(param)
+                                     : 저장된 파일명 idx 넣어 
+
+  ※서버의 bookImg폴더 파일을 소스의 bookImg폴더로 복사
+for(String img : image) 
+                 if(img != null){ img가 널이아니면 실행
+                           InputStream is =null
+		    OutputStream = null;
+                                   File serverFile = new File(path + img); 
+                                        is = new FileInputStream(servarFile);   //servarFile : (path+img)
+                                            os = new FileOutputStream("bookImg 저장 주소 +img)
+  
+  
+※파일첨부외 파라미터에서 입력된 정보 get
+  int bid = 0 초기화 
+  책제목 : btitle
+  책가격 : bprice
+  이미지1 :image[0]
+  이미지2 :image[1]
+  책설명 : bcontent
+  책할인 : bdiscount 
+ Date brdate =null; 디폴트 오늘 시점
+ BookDao bDao = BookDao.getInstance();
+ BookDto book = new BookDto(bid, bprice, bimage1, bimage2, 
+                                                bcontent, bdiscount, brdate);
+int result = bDao.insertBook(book); 책등록 함수 호출
+if(result == BookDao.Success 이면 
+    '책등록 성공'
+아니면 
+    '책등록 실패'
+

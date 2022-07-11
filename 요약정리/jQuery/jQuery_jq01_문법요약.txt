@@ -1,0 +1,208 @@
+1. jQueryInto
+ -jQuery 란 자바 스크립트 라이브러리 중 가장 인기 있는 라이브러리
+    이벤트 대응 , 애니메이션과 메뉴효과 등에서 가장 단순하고
+       쉽게 페이지 제작을 할 수 있도록 도와준다 
+
+- 기능 : 문서 객체 모델과 관련된 처리를 쉽게 구현
+
+     - 일관된 이벤트 연결을 쉽게 구현
+     - 시각적 효과를 쉽게 구현
+     - aJax 애플리케이션을 쉽게 개발
+     -jQuery는 자바스크립트 사용을 더욱 쉽게 하는 목적 
+     - 자바 스크립트를 더욱 쉽게 가볍게 만들어준다
+
+
+
+CDN 주소 아무거나 사용해도 상관 없음 
+
+
+★  $('선택자').함수();
+ ' ' :  'h1 태그 <>' 
+  # :  id   
+   . :  class
+1.html('코드') : 해당 선택자 안에 html코드 삽입
+   html()
+
+2. text('text') : 해당 선택자 안에 tetxt 삽입
+    text()
+
+3. hide() : 숨기기 
+
+4.show() : 나타내기
+
+5.toggle()
+
+6.val ('바뀔 value') : input 안에 value 변경
+  val()
+
+7. css: ('css속성','css속성값')
+
+8. each : 배열 처리 함수 (cf . forEach)
+
+9.addClass : 클래스 추가
+
+10. removeClass : 클래스 삭제
+
+11. append('추가내용') 뒤에
+
+12.prepend('추가내용')  앞에
+
+13. attr 
+
+14. 이벤트 관련 함수
+     click(콜백함수)  : keyup, mouseenter, submit,......
+     -on
+     -off(이벤트삭제)
+     -trigger(이벤트강제실행)
+     -one
+  
+15. ajax 관련 함수
+ :get, post, ajax
+
+
+★ ★ ★ ★ ★ ★ ★ ★  02_hide _ show  ★ ★ ★ ★ ★ ★ ★ ★
+ $('p')선택자 .click(); 클릭하면
+
+-클릭- 
+$(document).ready(function(){
+    $('p').click(function(){   : p태그 클릭하면 
+         $(this).hide();  - this 내자신 p 3개  hide 숨겨 
+    
+-버튼-
+  - $('button#hideP1').click(function () { : hideP1을 누르면  
+  - $('#p1').hide() :  p1 태그 사라짐 
+
+  -$('button#hidePtag').click(function(){  :hidePtag 누르면
+  -$('p').hide();   : p 전체 사라짐
+
+ -$('button#showPtag').click(function(){  :showPtag 누르면
+ -$('p').show();  : p태그 다 보여줌 
+
+★ ★ ★ ★ ★ ★ ★ ★  03_toggle  ★ ★ ★ ★ ★ ★ ★ ★   
+
+$('button').click(function(){ :button 누르면
+   $('#show').toggle();  : #show(빨간상자) 
+       보이게 , 사라져  토글 가능
+
+★ ★ ★ ★ ★ ★ ★ ★  04_val_html  ★ ★ ★ ★ ★ ★ ★ ★   
+
+  1. var msg = $('#msg').text();
+
+  -text ()에 매개변수를 안넣으면 p태그와 p태그에 
+       사이에 있는 text을 가져옴 : Hello, jQuery
+ 
+
+  2. var msg = $('#msg').html(); 
+   -html() 에매개변수를 안넣으면 p태그와 p태그에 
+       사이에 있는 html을 가져옴 : <b>Hello, jQuery</b>
+
+
+★ ★ ★ ★ ★ ★ ★ ★  05_selector  ★ ★ ★ ★ ★ ★ ★ ★ 
+-$('tr:even').css :  0 번 시작 (짝수)  
+-$('tr:odd')  .css  : 0 번 시작 (홀수)
+-$('tr:nth-child(3n)') : 1부터 시작
+-tr:eq(0)
+
+★ ★ ★ ★ ★ ★ ★ ★  06_게시판eq  ★ ★ ★ ★ ★ ★ ★ ★ 
+- isNaN(Number(값) : number가 아니면
+- ! isNaN(Number(값) : number가 맞으면
+
+-$('tr').click(function(){ : tr 클릭하면 
+    -var no = $(this).children().eq(0).text();
+     -변수 no 에 tr 자식 0번방 text 뽑아와 
+
+★ ★ ★ ★ ★ ★ ★ ★  07_each  ★ ★ ★ ★ ★ ★ ★ ★ 
+-var array = [{ name:'네이버' , link : 주소}] * 4 ;
+-each(array, function(idx, item)
+   -array : 배열
+   - idx   : 순번 받는 변수
+   - item : 객체 받는 변수
+
+ - $('body').html($('body').html() + '<h1>TEST</h1>');
+      body html 안에  ($body 아무것도 없네) + <h1>TEST</h1>
+       결과 : TEST * 4
+
+var out ='';
+- out += '<h1>' + item.name +'</h1>'; 
+   out에 item.name(가메 네이버 다음 구글 받아와서 넣어 !!)
+
+-out += '<h1><a href="'+item.link+'"> ' + item.name +'</a></h1>'
+     <a item.lnk주소  + item.name >출력 
+        name 누르면 링크로 가기 
+
+★ ★ ★ ★ ★ ★ ★ ★  08_addClass_removeClass  ★ ★ ★ ★ ★ ★ ★ ★
+
+- class 는 중복 이름 가능  <td class="tdRed title s">
+   $('td').on('click' , function()   : ('이벤트함수', 수행로직)
+    -td 를 클릭하면  
+       $('td').removeClass('tdRed');
+        td 에 (tdRed 클래스) 원색으로 원상복구
+  -$(this).addClass('tdRed'); //내가 클린 한거는 tdRed 
+★ ★ ★ ★ ★ ★ ★ ★  08_addClass_removeClass2  ★ ★ ★ ★ ★ ★ ★ ★
+-id 속성 없이 하는 법
+-  td가 여러개 있으니 배열(.each )
+- 전에 방법은 통째로 이벤트를 거는 거고
+ - 이번에는 "this.click" 따로따로 이벤트를 건다 
+
+★ ★ ★ ★ ★ ★ ★ ★09_append_prepend_off_trigger★ ★ ★ ★ ★ ★ ★ ★
+-append : 뒤에 내용 더해준다 
+-prepend : 앞에 내용 추가
+-trigger : 강제 이벤트 발생
+
+- var h1HitCnt = 0 ;
+      : h1 클릭한 숫자 변수
+ 
+var h1HitCnt = 0;
+   hiHitCnt++;
+
+     if( if(h1HitCnt < 6) {
+       - hiHicnt 가 5번 클릭하면 이벤트 종료
+      else{
+        $('#h1') .off( );
+           -이벤트 종료
+
+★ ★ ★ ★ ★ ★ ★ ★  10_one  ★ ★ ★ ★ ★ ★ ★ ★  
+  -$('h1').one('click', function()
+      한번클릭후 이벤트 한번 수행 자동 제거 
+  
+
+★ ★ ★ ★ ★ ★ ★ ★  11_keyup_submit.html  ★ ★ ★ ★ ★ ★ ★ ★  
+※ keyup : 입력후
+ - var pw = $('input[name="pw"]').val() : 비번 
+- var pwChk = $('input[name="pwChk"]').val() : 확인비번
+ if(pw == pwChk)
+$('.result').html('<b>비밀번호 불일치</b>');
+
+※  submit : 서브밋 이벤트
+('form').submit : form 태그에 서브밋 버튼 눌렀을때
+     -$('form').submit(function()
+- var resultMsg = $('.result').text().trim() 
+   resultMsg 에 result 값 넣어주고 
+- if( resultMsg != '비밀번호 일치') { 
+       비밀번호 일치랑 다르면!
+    alert('비번 확인하세요');
+  
+★ ★ ★ ★ ★ ★ ★ ★  12_mousedown_mouseup  ★ ★ ★ ★ ★ ★ ★ ★  
+ 1 . mousedown : 마우스 눌렀을때
+      - $('img').mousedown function(){
+            $(this).attr('src','img/but2.gif')
+                    눌렀을때 but2.gif 실행
+     }
+
+  2. mouseup : 마우스 눌렀다 땠을때 
+      - $('img').mouseup function()
+         $(this).attr('src', 'img/but1.gif')
+             눌렀을때 but1.gif 실행
+
+★ ★ ★ ★ ★ ★ ★ ★ 13_mouseover ★ ★ ★ ★ ★ ★ ★ ★
+- 버튼4개 
+1.mouseover : 
+ var overImg = [이미지]
+   $('img').each(function(idx, item){
+     $(this) mouseover (function() {
+      $(this).attr('src', overImg[idx]);
+ 
+2.mousedown :
+  var  outImg = [이미지]
+     $(this).mouseout(function()
+      $(this).attr('src', outImg[idx]);

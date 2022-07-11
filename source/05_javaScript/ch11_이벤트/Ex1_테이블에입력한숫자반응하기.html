@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{width : 300px; height : 400px;
+              border : 1px solid green;
+        }
+        td{width : 80px; height : 100px;
+           border : 1px solid green;
+           text-align :center;
+        }
+    </style>
+    <script>
+        window.onkeyup = function () {
+            var rightKeyCode = event.keyCode - 96; // 오른쪽 키패드  96~104  
+            var topKeyCode = event.keyCode - 48; // 윗 키패드 48 ~ 56
+            var td = document.getElementsByTagName('td'); // td에 밑에있는 td 가져와 
+            if (event.keyCode >= 48 && event.keyCode < 57) { // 이벤트코드가 48보다 크거나 같고 57보다 작으면
+                // 윗키보드
+                for (var idx = 0; idx < td.length; idx++) { // 반복문 실행
+                    td[idx].style.backgroundColor = 'white'; // td[0~8] 하얀색 넣어 
+                }
+                td[topKeyCode].style.backgroundColor = 'yellow'; //td 
+            } else if (event.keyCode >= 96 && event.keyCode < 105) {
+                for (var idx = 0; idx < td.length; idx++) {
+                    td[idx].style.backgroundColor = 'white';
+                }
+                td[rightKeyCode].style.backgroundColor = 'red';
+
+            }
+        };
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+
+    </table>
+</body>
+</html>

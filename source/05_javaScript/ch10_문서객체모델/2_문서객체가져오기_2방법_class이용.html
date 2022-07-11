@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            // getElementsByClassName() 의 return 값은 배열로
+            var clock1 = document.getElementsByClassName('clock1'); // 클래스 이름을 가져오기 위하여 
+            //h1에 ' 시간' 을 넣고싶을때
+            clock1[0].innerHTML = new Date().toLocaleString();
+
+            //clock2 type =text 여서 clock2.value로 추가 !!
+            var clock2 = document.getElementsByClassName('clock2')[0];
+            clock2.value = new Date().toLocaleString();
+
+            //색 넣기 
+           //  방법 1 .clock2.style = 'color:red; font-size:20px;
+         clock2.style.cssText = 'color:red; font-size:150px;';
+            //clock2.style.color = 'red';
+          // clock2.style.fontSize = '50px';
+        };
+    </script>
+</head>
+<body>
+    <h1 class="clock1"></h1>
+    <input type="text" class="clock2" />
+
+</body>
+</html>

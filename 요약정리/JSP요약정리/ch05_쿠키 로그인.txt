@@ -1,0 +1,27 @@
+login.html 첫 로그인화면 
+- 아이디 aaa 111 똑바로 입력안하면 떼끼
+
+잘입력하면 
+
+loginOk.jsp
+정확히 입력한 id pw request 받아오고 
+
+welcom.jsp 로 넘어가자 
+-두개 화면 만들꺼야 
+{    logout.jsp }
+     -로그인후 로그아웃 버튼 생성
+
+
+{   login.html }
+     -로그인전
+
+
+
+  하나는 로그인하고 로그아웃 버튼 나오게 
+
+Cookie[] cs = request.getCookies() ; 쿠키 받아와 
+cs != null  이면 로그인 안한거야 중요한건 id name 쿠키가 있냐
+
+
+
+

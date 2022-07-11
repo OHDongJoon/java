@@ -1,0 +1,101 @@
+[ 18 ] Front Controller와 Command 구조
+
+[1]. url - pattern
+  - 디렉터리 구조 : 디렉터리 형태로 서버의 해당
+     컴포넌트(서블릿)을 찾아서 실행하는 구조 
+  서블릿을 만들고 서블릿의 긴 주소가 보안상 문제가 
+   되거나 너무 길어, 매핑을 한다. xml이나 어노테이션을 이용해
+  매핑을 할때 사용했던 방식
+
+[2]. FrontController : 클라이언트의 다양한 요청을 한곳으로 
+   집중시켜, 개발 및 유지보수에 효율성을 극대화 위의 경우
+   컴포넌트들끼리 중복되는 코드가 있을 수도 있고 ,
+   파일이 여러 개라 집중성이 떨어질 수 있다.
+  요청을 받는 창구를 하나로 집중시켰다고도 할 수 있다.
+
+
+-------------------------[ex1] . first.jsp---------------------------------------
+공통점 : .do 로 끝난다 
+.do로 끝나면 나한테 오라?
+     -insert.do
+    - select.do
+    -update.do
+-----------------서블릿 FrontController.java-------------------------
+-클라이언트의 다양한 요청을 한곳으로 집중 시키는 것을
+'FrontController' 라한다 
+
+@WebServlet("*.do")
+- 여러가지 요청을 .do로 가기위해 (* 모든거).do 로  
+
+- insert.do , select.do , update.do  이곳으로 옴
+
+- URI : 주소창에서 http 뺀거  : /ch18/*.do
+  
+1. 요청받은 거만 가져오기 
+     - String uri = request.getRequestURI()  : ch18/select.do
+     - String conPath = request.getContextPath()   : ch18"
+     - String command = uri.substring(conPath.length()) :  /select.do
+   
+2. 한곳에 3개 나누기 
+
+ -command . equals ( /insert.do) 냐 ? {
+    -insert 로직 실행
+    -request.setAttribute
+    -viewPage= "ex2/insert.jsp" 이 페이지로 가라 
+}
+
+- RequestDispatcher 추가 
+  -하지만 이렇게 하면 로직이 길어지면 유지보수가 어렵다 
+  - 그래서 로직을 수행할 객체 생성
+  -객체이름.메소드(request,response)
+ 
+  
+--------------------------ex2/insert.jsp ,select.jsp , delete.jsp , update.jsp ------------------
+결과 값 뿌리기 
+
+
+---------------------
+
+
+[3] Command 구조 : 클라이언트로부터 받은 요청들에 대해서 , 서블릿이 
+ 작업을 직접 처리 하지 않고, 해당 클래스가 처리하도록한다.
+  FrontController 한군데서 처리하면 소스가 또 너무 방대해진다
+ FrontController.java는 큰 형태만 갖고 있고 세부적인 처리는 
+   'command'에서 처리한다.
+
+---------------인터페이스 Service.java-------------
+
+-public void execute(HttpServletRequest ) 
+     - HttpServletRequest : FrontController.java 에 있는
+
+--------------클래스 InsertService .java =  implements (인페)Service------------------------
+
+- insert 로직(DAO 생성 -request.getP~ 파라미터 받아 dto 객체 생성 - dao.insert 호출
+-int result = 1;
+-request.setAttribute("insertResult", result); 
+    : 이걸  실행 하면 함수가 호출되고 FrontController간다 
+
+
+
+-----------커멘드 FrontControler - -----------------------
+
+- Service service = null  변수 설정 
+- if insert 로직 뿌리는곳 {
+ 
+-객체생성
+   service = new InsertService()  
+- insert 로직 수행할 객체 생성
+   service = new InsertService()
+
+}
+-------select.jsp ---------------- 
+
+    - 출력   insertResult  , deletetResult ,updateResult
+    <c:if test="${insertResult == 1 }">
+      <script> alder('insert 성공')</script>
+     </c:if>
+
+
+
+
+

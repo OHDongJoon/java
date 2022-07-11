@@ -1,0 +1,14 @@
+★ input[type="password"] :input 태그 중에 type 속성이 password 만 
+
+★ input[type^='te'] 
+
+★ input[name$='me']
+
+<b>글씨가 굵게 나온다... 보통 font-weight:700 정도.. 
+
+​
+★  background: url('0503/man.png') no-repeat; /* no-repeat 한개만 나오게*/
+★ padding: 0 0 0 30px; /*위,우,하,좌*/ 요걸
+요렇게 padding-left : 30px 하면 왼쪽만 30px
+
+★nth-child(2n+1){ /* ul 밑의 li들 중 홀수번째 요소들 */

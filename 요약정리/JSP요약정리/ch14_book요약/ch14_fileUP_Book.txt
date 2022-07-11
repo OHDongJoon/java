@@ -1,0 +1,33 @@
+
+ex1_bookRegissterForm
+빈  사용하려면 
+img 파일 네임을 dto랑다르게
+
+ex2_bookRegisterPro.jsp--
+
+1. 파일 첨부 안했을 수도 있으니 null 값 설정
+	try 위에다 
+	-MultipartRequest mRequest = null;
+
+
+-new DefaultFileRenamePolicy 같은 파일 들어오면 1011 
+-Enumeration<String> paramNames = mRequest.getFileNames(); 
+	- 파라미터 이름들
+
+
+
+
+ex3_produtct(쇼핑몰)
+하나 둘 셋 하고 내리고 해야 되니 
+일반 for문 으로 출력
+
+
+
+--상세보기 productp.jsp에 
+a 감싸고 
+jsp?bId pageNum 추가
+
+
+ 6.10일 할 예제 
+-게시판
+-ex2_bookRegisterPro.jsp 참조 

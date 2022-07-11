@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+     $(document).ready(function(){
+    	 $('tr').click(function(){
+    		 var no = $(this).children().eq(0).text();   // tr을 클릭하면 tr의 자식들의 0번째(first)의 text를 가져와서 no에 넣는다 , 즉 글번호를 의미 
+    		 alert(no);
+    		  if(! isNaN(Number(no))){ 					//isNaN이  Number가 아니면 true Number이면 false;  ! = 반대 number가맞으면 실행?
+    			 alert(no+'번 페이지로 이동합니둥');
+    		    location.href = '03_toggle.html?no='+no; //  no 설정을 글번호 (1,2,3,4) 로 해놨으니 밑에꺼는 다 number 
+    		                                             // +'$pageNum='${pageNum}; 게시판에서 쓸대는 이런식으로 pageNum도 같이 넘겨 
+    		  }
+    	 });
+     });
+   </script>
+</head>
+<body>
+   <table>
+     <tr>
+       <th>글번호</th>
+       <th>글제목</th>
+       <th>글쓴이</th>
+       <th>조회수</th>
+    </tr>
+    <tr>
+       <th>4</th>
+       <th>제목4</th>
+       <th>오사동</th>
+       <th>44</th>
+    </tr>
+    <tr>
+       <th>3</th>
+       <th>제목3</th>
+       <th>오삼동</th>
+       <th>20</th>
+    </tr>
+    <tr>
+       <th>2</th>
+       <th>제목2</th>
+       <th>오이동</th>
+       <th>21</th>
+    </tr>
+    <tr>
+       <th>1</th>
+       <th>제목1</th>
+       <th>오일동</th>
+       <th>3</th>
+    </tr>
+    
+   </table>
+</body>
+</html>

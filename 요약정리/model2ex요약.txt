@@ -1,0 +1,32 @@
+  --           header . jps                 -- 
+★ ★ ★ ★ ★ ★ ★ ★ ( 로 그 인 전 화 면) ★ ★ ★ ★ ★ ★ ★ ★ 
+{empty member and empty admin} 
+
+ :   member가 널이고 admin이 널이면   
+    
+
+ - 고객센터  ( baordList.do) 실행 
+
+- 회원 가입 (joinView.do) 실행
+
+- 로그인 (loginView.do) 실행 
+
+★ ★ ★ ★ ★ ★ ★ ★ ( 사용자 모드 로 그 인  화 면) ★ ★ ★ ★ ★ ★ ★ ★ 
+{not empty member and empty admin}
+
+-고객센터 (boardList.do)
+
+- 로그아웃(logout.do)
+
+-정보수정(modifyView.do)
+
+★ ★ ★ ★ ★ ★ ★ ★ ( 관리자 모드 로 그 인  화 면) ★ ★ ★ ★ ★ ★ ★ 
+{empty member and not empty admin}
+
+- 고객센터(boardList.do)
+
+-관리자모드나가기(logout.do)
+
+---  footer.jsp ---  
+관리자모드 누르면   
+   (/adminLoginView.do) 관리자 모드 로그인  실행 

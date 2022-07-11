@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /*var cnt = 0;
+        for (var key in window) {
+            document.write(++cnt + ' . ' + key + ' : ' + window[key] + '<br>');
+        } */
+        var cnt = 0;
+        // 익명함수 var chk = function () { };
+        function chk() { }
+
+        
+
+        // on으로 시작되는애는 이벤트속성이다이말이야!
+        // (onload)  : window 가 load 될 때 수행할 함수
+        // 로드될때 뽕션 넣은거 
+        window.onload = function () { alert('윈도우로드'); };
+        for (var key in window) {
+            if (key == 'onload' || key == 'chk' || key == 'cnt') {
+                document.write(key + ' : ' + window[key] + '<br>');
+            }
+        }
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

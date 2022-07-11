@@ -1,0 +1,74 @@
+[ 15 ] EL(Expression Language)  
+      : 표현식 또는 액션태그를 대신해서 값을 표현
+
+ (1) . EL(Expression Language)란?
+   - EL 이란 , 표현식(<%=~%>) 를 조금 더 간략하게
+       대신해서 값을 표현하는 언어
+          액션태그를 조금 다르게(간략하게) 표현한 것
+
+※   표현식 (<%= value %> ) → EL 표기법(${ value })  ※
+  ★  ★  [1_expression]  . ex.jsp ★ ★
+-${10+1 }  뒤에스페이스바
+-${1 eq 2 } : 같냐 
+-${empty customer ? : 
+         -null이냐 ? 
+-${not empty customer ?  : 
+        -null이아니냐 ? 
+
+<p>name 파라미터 대문자로 
+        : ${param.name.toUpperCase() }</p>
+             - 해당 파라미터가 없어도 예외 발생 안함
+
+   ★ [2_bean] . ex1.html   , ex1.jsp ★ 
+
+-이름 : <%=member.getName() %>
+
+※  ※ ※ EL 표기법 ※ ※ ※
+- 이름 : ${member.name }
+
+   ★  ★ [3_innerObject] .ex01 ,ex02_scope.jsp 
+이름 :  <%=request.getParameter("name") %>
+
+※  ※ ※ EL 표기법 ※ ※ ※
+이름 : ${param.name } 
+      null 이여도 null 로 안뜨고 빈스트링으로 나옴
+
+- <jsp:forward > 
+      : set 객체 적어주고 밑에다 적기 
+    - request  안 없어지고 그대로 감 
+
+- response.sendRedirect - 
+    하면 set 날라가고 
+            forward 해야 안날라감
+
+
+---RequestDispatcher dispatcher = ---
+        request.getRequestDispatcher("ex02_scope.jsp")
+            dispatcher.forward(request, response);
+-set한거 그대에에에로 안고 감 
+----------------------------------------------
+
+ ★  ★ [3_innerObject] . petInput.html , ex04_petResult
+
+input.html
+checkbox 5개 
+
+petResult
+${paramValues.pets[0] }
+	-  ${paramValues.pets[1] }
+	 -${paramValues.pets[2] }
+	  -${paramValues.pets[3] }
+	   - ${paramValues.pets[4] }
+${empty paramValues.pets ? "없" : ""}  null?이냐 ?
+
+★   ★  ★  ★  ★ web.xml  ★  ★ ★  ★
+  window - show - Project  -ch 밑에 
+    Deployment 오른쪽마우스 - Generte
+ <context-param>
+     <param-name>contextId</param-name>
+     <param-value>scott</param-value>
+  </context-param>
+  <context-param>
+    <param-name>contextPW</param-name>
+    <param-value>tiger</param-value>
+  </context-param>

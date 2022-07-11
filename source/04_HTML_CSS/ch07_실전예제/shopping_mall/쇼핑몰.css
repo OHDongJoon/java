@@ -1,0 +1,202 @@
+﻿
+  /* * * * 전체레이아웃* * * */
+  *{margin:0; padding : 0;} 
+  
+  li{
+      list-style:none;
+  }
+  a{
+    text-decoration:none;
+  }
+#wrap {
+    /*border: 1px solid red;*/ /* 라인 먼저 설정 해서 확인하자 */
+    width: 1000px;
+    margin: 0 auto; /*뭔짓거리를 하던지 가운데로 조정*/
+}
+
+/* * * header* * * */
+#header{
+   
+}
+#header .gnb{}
+#header .gnb ul{
+    
+    overflow : hidden;
+    background-color : black;
+}
+#header .gnb ul li{
+    float :left;
+    margin-left :3px;
+    padding :5px 23px ;
+
+}
+    #header .gnb ul li a {
+        font-weight: bold;
+        color : white;
+    }
+/*gnb 끝*/
+
+    #header .logo {
+        
+    }
+#header .logo p{
+    width : 200px;
+    height :100px;
+    border : 1px solid lightgray;
+    text-align:center;
+    line-height : 100px;
+    margin :10px 0 5px 400px;
+    
+
+}
+/*logo끝*/
+
+    #header .hitmenu {
+      
+    }
+        #header .hitmenu ul {
+            overflow: hidden;
+            margin-right: 20px;
+        }
+#header .hitmenu ul li{
+    padding:10px 30px;
+    float:right;
+    border :1px solid lightgray;
+  
+    
+}
+
+    #header .hitmenu ul li:nth-child(1){
+        border-radius : 0 10px 10px 0;
+    }
+    #header .hitmenu ul li:nth-child(4) {
+        border-radius: 10px 0 0 10px;
+    }
+
+    #header .hitmenu ul li a {
+       font-weight :bold;
+    }
+
+    /*hit 끝*/
+
+    #header .lnb{}
+    #header .lnb ul{
+        border-top :1px dashed black;
+        border-bottom :1px dashed black;
+        overflow : hidden;
+    }
+    #header .lnb ul li{
+        float : left;
+        margin :10px 16px;
+        padding :10px 20px; 
+    }
+    #header .lnb ul li a{
+        font-weight :bold;
+    }
+
+    #content{
+        width : 100%; 
+        
+       
+    }
+        #content .section1 {
+            border: 1px solid black;
+            overflow: hidden;
+        }
+            #content .section1 .slide_banner {
+                float: left;
+                width: 660px;
+                height: 380px;
+                border: 1px solid lightgray;
+                text-align: center;
+                line-height: 380px;
+                margin-left: 30px;
+            }
+    #content .section1 .slide_banner p{}
+
+            #content .section1 .side_banner {
+                float: left;
+                width: 280px;
+                height: 380px;
+                text-align: center;
+                line-height: 380px;
+                border: 1px solid lightgray;
+                
+            }
+  
+    /*section1 끝*/
+
+    
+    #content .section2{
+       
+    }
+        #content .section2 .hit_product {
+            overflow: hidden;
+            border: 1px solid lightgray;
+        }
+            #content .section2 .hit_product p {
+                float: left;
+                border: 1px solid lightgray;
+                width: 233px;
+                height: 400px;
+                margin: 7px;
+                text-align : center;
+                line-height : 400px;
+            }
+        #content .section2 .md_product {
+            overflow: hidden;
+            border: 1px solid lightgray;
+        }
+            #content .section2 .md_product p {
+                float: left;
+                border: 1px solid lightgray;
+                width: 233px;
+                height: 400px;
+                margin: 7px;
+                text-align: center;
+                line-height: 400px;
+            }
+
+ #footer{
+     overflow : hidden;
+ }
+ #footer .office_logo{
+     float : left;
+     width :330px;
+     margin-left : 1px;
+     height : 80px;
+     border :1px solid black;
+ }
+ #footer .office_logo p{}
+
+    #footer .office_address {
+        float: left;
+        width: 330px;
+        height: 80px;
+        border: 1px solid black;
+    }
+        
+    
+ #footer .office_address p{}
+
+    #footer .shopping_info {
+        float: left;
+        width: 330px;
+        height: 80px;
+        border: 1px solid black;
+    }
+        #footer .shopping_info p {
+           
+        }
+
+    #footer .copyright {
+        clear: both;
+        margin: 2px;
+        background-color: black;
+    }
+ #footer .copyright p{
+     color :white;
+     text-align :center;
+     
+ }
+

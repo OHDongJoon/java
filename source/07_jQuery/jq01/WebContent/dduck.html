@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Insert title here</title>
+  <style>
+   table td {width: 100px; height: 100px; background-color: #AAFFAA;}
+    .tdRed {background-color : red;}  
+	
+   </style>
+  <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function(){
+    	   var good = parseInt(Math.random()*9);
+    	 $('td').click(function(){
+         $('td').removeClass('tdClick');
+       var idx = Number($(this).attr('id'));
+       if(idx == good){
+    	   $('#msg').html('축하축하 맞췄어요');
+       }
+    	 });
+    	 }
+    </script>
+ </head>
+<body>
+ <table>
+ 
+  
+   
+  
+  
+     <tr> 
+          <td>1</td> 
+          <td>2</td>
+          <td>3</td>
+     </tr>
+     <tr> 
+          <td>4</td> 
+          <td>5</td>
+          <td>6</td>
+     </tr>
+     <tr> 
+          <td>7</td> 
+          <td>8</td>
+          <td>9</td>
+     </tr>
+     
+   </table>
+   <p class="result"></p>
+</body>
+</html>

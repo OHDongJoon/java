@@ -1,0 +1,42 @@
+enctype : "multipart/form-data" > 
+	- 이렇게설정해야 multipart를 사용 할 수 있다.
+
+<input type="file"> 사용
+name ="file" 사용하지 않으면 파라미터 를 전달 받을 수 없다
+
+폴더 fileUpFolder  : 파일업로드 저장할 곳 
+	-----ex1_fileupPro----
+-getRealPath("폴더명");
+-String filename = ""  
+	-서버에 저장될 파일 이름 , null로 안하는 이유는 첨부하지 않았을때 null 안나오게
+String originalFilename = ""
+	-
+int maxSize = 1024*1024*10 : 
+	-업로드 최대 용량을 10MB 이거 이상 첨부 못하게
+
+- new MultipartRequest(
+request : 애한테 위임?
+path : (파일 저장할 폴더)
+maxSize : 최대용량
+utf-8  : 한글안깨지게
+new DefaultFileRenamePolicy() : 
+	-같은 이름이 파일이 있을 경우 rename : 1.jpg -> 11.jpg
+)
+
+-Enumeration<String> paramNames = multipartRequest.getFileNames()  - 파라미터 이름들
+-String param 	= 		paramNames.nextElement(); - 파라미터 이름 "file"
+-filename = 			multipartRequest.getFilesystemName(param); - 파라미터 이름으로 저장된 파일 이름
+-originalFilename = 		multipartRequest.getOriginalFileName(param); - 오리지널 파일 이름
+ File 임폴트 java.lo
+
+
+
+--ex2_fileupForm3.jsp 파일 3개 
+파일3개 만들기
+
+--ex2_fileupPro3.jsp 파일 3개
+3개파일받기위해 배열 사용
+
+String []
+while(paramNames.hasMoreElements()){ 
+	-배열 next 할 거 있어 ?

@@ -1,0 +1,28 @@
+자바 아무 소스에
+Library 밑에
+모든 파일들이 jre 밑에 있는지 확인 
+ojdbc6.jar
+mysql 있나 확인
+
+없다면 
+로컬 c 
+oraclexe - app - oracle- product -
+11.2.0-server- jdbc -lib-  ojdbc6.jar
+
+로컬c
+
+Program Files - java -jre1.8.0_321 - ext 옮기기 
+
+mysql
+Program Files(x86) - MySql - Connecter j 8.0 
+mysql-connector-java-9.0.29jar 파일 
+ext 로 옮기기 
+
+자바에서 연동시키키
+Window - Preferences - Java - installedJRES
+
+
+
+
+
+

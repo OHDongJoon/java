@@ -1,0 +1,96 @@
+★ ★ header.jsp :
+  -로그인전 메뉴 우측부터
+      고객센터 , 회원 가입 , 로그인
+         -로그인 후 
+             고객센터 , 로그아웃, 정보수정
+
+  - 도서보기 , 도서등록(로그인후)
+    로그인전 도서 보기 뿌리고 
+      만약 loginPro에서 넘어온 
+         customer 가 널이 아니면 
+             로그인 한거니 
+                도서등록 뿌리기  
+
+★ ★ loginForm.jsp
+ --cid가 널이 아니면  (회원가입후 id get) 
+    -아디 , 비번 틀렸을때 
+       - loginPro 에서 넘어온 msg
+            (msg != null) 이면 
+                - 아디 비번 잊으셨나요 뿌려
+
+★ ★ loginPro.jsp
+-- 한글 처리 utf-8
+   - getParameter cid , cpw  
+     -getCustomer(cid) dto가져오기 함수
+      -Dao.getInstance 호출
+           int result = 로그인체크 함수
+
+ 참이면 result == 로그인성공
+    - dto = cDao.getCustomer(cid)
+       - session.set생성 ("customer" ,dto);
+           -메인 페이지로 (header)
+
+ 실패 result == 로그인실패
+    --로그인화면으로 가면서 msg 같이 넘겨 
+
+★ ★  joinPro.jsp
+-- 한글처리 
+    -useBean
+       -setProperty 
+
+*tempbirth 처리 
+   - 겟 tempbirth 받아오고 
+       dto.setCbirth(Date.valueOf(tempbirth));
+
+* id 중복체크 (confirmCid)
+   int result = confirmCid 함수 호출
+       만약 result = 중복 없어 
+            session 생성 "cid" , dto.getCid()
+                회원 감사 로그인 후 이용 
+                     location.href = 'loginForm.jsp';
+              회원가입 실패 ( 너무 긴데이터 , 중복 id)
+★ ★ modifyForm.jsp
+   -아이디 
+      <%=cid%>
+    -현비번
+        name ="oldPw"  id="cpw"
+   -새비번
+       name = "cpw"  id="cpwChk"
+   - 이름 
+       <%=cname%>
+    -저나
+   <%=ctel%>
+   -이메일
+   <%=cemail != null ? cemail : "-"
+  - 주소 이메일 똑같음
+  
+   *생년월일
+  type = date , name = tempbirth , id ="cbirth"
+  value = <% cbirth 널이 아니면 cbirth.toString)
+ 
+-성별 
+   m . equals(cgender)이면
+     checked m 
+   f. equals(cgender)이면
+      checked f
+
+★ ★ modifyPro.jsp
+ - useBean
+ -setProperty
+* tempbirth = 리퀘 겟 tempbirth
+    - setCbirth (Date.valueOf(tempbirth)
+ -oldPw = 현비번 받아오기 
+ -customer 받아오기
+ -sessionPw = null 초기화
+ -customer != null {
+      sessionPw = customer.getCpw() 
+-새 비번 수정 하지 않을때 (pw null 들어옴)
+  
+oldPw 랑 sessionPw 맞으면 수정 진행
+  dao.getinstance
+int result = dao.updateCustomer 호출
+result == success 이면 
+ 세션 생성 "customer" , dto
+
+
+

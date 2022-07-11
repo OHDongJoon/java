@@ -1,0 +1,33 @@
+★ ★ ★ ★ ★ ★ index.jsp ★ ★ ★ ★ ★ ★ ★ 
+
+<jsp:forward page="list.do"/>
+★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ 
+
+★ ★ ★ ★ ★ ★ Boardcontroller.java (서블릿) ★ ★ ★ ★ ★ ★ ★ 
+if(command.equals("/list.do")) {
+   -service = new BListservice() 호출 
+  ---------- BListservice()  (인터페이스) ---------------
+   -pageNum  받고 
+      pageNum이 null 이면  1로설정 (맨처음 실행할 경우 1페이지로가게)
+    
+   - 목록 로직 수행 
+   -bDao.listBoard (startRow, endRow) 함수 호출 
+  
+   -이하페이지 
+    list.jsp 에 페이징 계산을 넘겨줌 !
+   
+----------------------------------------------------------------------  
+   viePage = board/list.jsp로 ~~~~~~~~~~~
+   }
+★ ★ ★ ★ ★ ★ ★ ★ ★ ★글쓰기 write ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
+ list.do 에서 글쓰기 버튼을 누르면  -> write_view 에서 글쓰기확인
+   -> write.do 실행
+     
+else if(command.equals("/write_view.do")){
+  viewPage = "board/write_view.jsp" jsp 파일로 가기 
+  write_view = true   (새로고침할때 글쓰기 가 또 실행 놉)
+    write_view에서 글쓰기 버튼 누르면 action ="write.do" 실행
+       
+}else if(command.equals("/write.do")){  -- 원글 DB 저장
+
+}

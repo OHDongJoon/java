@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td {
+            text-align: center; /* 글씨 가운데 정렬*/
+            padding: 2px; /* 안여백 */
+        }
+    </style>
+</head>
+<body>
+    <form action="#" mehod="get">
+        <table>
+
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <!-- size 5 하면 5글자 정도 들어가는 크기로보임 alert 팝업메세지창-->
+                    <input type="text" name="id" size="9" />
+                    <input type="button" value="중복확인" onclick="alert('중복확인 test');" />
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>비밀번호</td>
+                <td>
+                    <input type="password" name="pw" />
+                </td>
+            </tr>
+            <tr>
+                <!-- type=number 1*10 8승 = 1e8 이렇게 들어가서 안씀 -->
+                <td>전화번호</td>
+                <td>
+                    <input type="tel" name="phone1" size="1" /> -
+                    <input type="tel" name="phone2" size="1" /> -
+                    <input type="tel" name="phone2" size="1" />
+                </td>
+            </tr>
+            <tr>
+                <td>경력</td>
+                <!-- number 쓰면 최소값 최대값 넣을 수 있음 하지만 size 는 못 건드려-->
+                <td><input type="number" name="career" max="50" min="0" /></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="email" name="eail" /></td>
+            </tr>
+            <tr>
+                <td>사진</td>
+                <td><input type="file" name="filename" /></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+
+                <td>
+                    <!--남 여 체크 박스 만들기 raddio 기본체크 값 설정 checked="checked" -->
+                    <!-- 남 여 체크 하나만하려면  name같게  name다르게 입력하면 둘다 체크됨 그래서 같게 입력해-->
+                    <input type="radio" name="gender" value="m" checked="checked" />남
+                    <input type="radio" name="gender" value="f" /> 여
+                </td>
+            </tr>
+            <tr>
+
+                <!-- 콤보박스 설정 select 하나만 설정해야지 국적이니가 그래서 name 같게 value 생략해도  괜춘 무조건 1개 선택해야함-->
+                <td>국적</td>
+                <td>
+                    <select name="nation">
+                        <option>대한민국</option><!-- option value를 생략하면 value=대한민국-->
+                        <option value="usa">미국</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td>좋아하는음식</td>
+                <td>
+                    <!-- multiple 하면 다중선택가능 선택안해도 가능 size3 하면 3개만보임-->
+                    <select name="food" multiple="multiple" size="3">
+                        <option>김치찌개</option>
+                        <option>된장찌개</option>
+                        <option>섞어찌개</option>
+                        <option>부대찌개</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- type="submit"(기본값 제출) || value 써서 변경 회원가입-->
+
+            <tr>
+                <td>사용언어</td>
+                <td>
+                    <!--checkbox 다중선택 가능-->
+                    <input type="checkbox" name="lang" value="kor" checked="checked" />한국어
+                    <input type="checkbox" name="lang" value="eng" /> 영어
+                    <input type="checkbox" name="lang" value="chi" /> 중국어
+                    <input type="checkbox" name="lang" value="ind" /> 인도어
+                </td>
+            </tr>
+            <tr>
+                <!-- 자기소개 tex ㄴㄴ text area 쌉가능-->
+                <td>자기소개</td>
+                <td><textarea name="intro" cols="25" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td>생년월일</td>
+                <td><input type="date" name="birth" /></td>
+            </tr>
+            <tr>
+                <td>sus url</td>
+                <td><input type="url" name="sns" /></td>
+            </tr>
+            <tr>
+                <td>좋아하는 색상 <br /> 좋아하는 정도</td>
+                <td>
+                    <input type="color" name="color" /><br />
+                    0<input type="range" name="range" min="0" max="100" step="10" />100
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="회원가입" />
+                    <input type="reset" value="초기화" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

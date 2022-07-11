@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        scoreStr = prompt('점수를 입력하세요', '0~100점 사이');
+        if (scoreStr == null) {
+            alert('점수를 입력하세요');
+        } else {
+            // document.write(scoreStr + '의 타입은' + typeof (scoreStr)); prompt 로 받으면 스트링으로 받는다 
+
+            score = Number(scoreStr); //Integer.parseInt("") 오류가나는데  , 자바스크립은 Number 형변환 (""); 결과는 0 이얌 
+
+            //document.write(score + '의 타입은 ' + typeof(score));
+            if (isNaN(score)) { //NaN이냐 ???? 임마!! , score 가 NaN이면 true를 return
+                alert('점수를 입력하세요');
+            } else {
+                result = score > 70 ? "잘했다 진영아 " : "잘 좀 하자 진영아";  //result에 스코어가 70보다크면 잘했다 진영아 : 이하이면 잘좀하자 진영아 
+            }
+            document.write(result); // result 출력
+        }
+       
+    </script>
+</head>
+<body>
+
+</body>
+</html>

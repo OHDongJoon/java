@@ -1,0 +1,27 @@
+ex1_bookRegisterForm 
+   - 책 등록   
+   - submit 누르면 ex2_bookPro 로 슝~
+
+ex2_bookRegisterPro
+ - 한글로 들어 올수 있으니 setChar ("utf-8)
+ - 저장할 폴더 설정 path = 리퀘 getRealPath("폴더명")
+ - max size 설정
+ - 두개 이상 들어오면 배열로 받자 
+ - 이미지 파일 선택 안할수도 있으니 Multipart try 위에 null 설정
+ - new Multipart 생성 
+ - hasMoreElements  : 파일 가져올거 있어 ? 가져와 
+
+ - 한 번에 밑으로 쫙 출력 하니 확장 for문 가능
+
+ex3_list_board.jsp(게시판스타일)
+ -ArrayList  books = listBook();  책 리스트 불러오기 함수 호출
+ -books.size가 0이면 없습니다 뿌리고 
+ -있으면 몇개가 들어 올지 모르니 확장 for문 으로 쫙 출력
+
+ex3_list_boardp.jsp(페이징)
+ -pageNum 겟 받기 
+ - pageNum이 null 이면 1로 설정
+ 
+ex3_list_product(쇼핑몰).jsp
+ -3개하고 밑으로 내려야 하니 확장 for문 놉 일반 for문
+ - if(i % 3 ==2) </tr><tr>

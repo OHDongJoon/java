@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = { name: '오동준', 'age': 25 }; // student 객체 안에 속성값 name 추가 
+
+        student.name = '김길동';
+        document.write(student.name + '  ' + student['name']);
+
+        student.name = '신길동';
+        document.write(student.name + '  ' + student['name']);
+
+        student.kor = 100; // 객체의 속성 추가 계속 가능
+        student.mat = 99;
+        student.hobby = '프로그래밍 구현';
+
+        //student 안에 있는 student [name] .. , kor mat .. 등등 이거실행하려면 하나씩 다적어야 되니 귀찮 그래서 toString사용
+        document.write('<hr>' + student.toString() + '<br>'); //toString() 함수 호출
+
+        //   document.write(student.toString());  //  toString 제정의 해야 안에 내용 실행
+
+        student.toString = function () {
+            var output = ' ';
+            // var idx에 in 내 객체안에(this==student) 
+            for (var key in this) {
+                if (key != 'toString') { // toString이 아닌 걸 출력해 !
+                output += key + ' : ' + this[key] + '<br>';
+                }
+            }
+            return output;
+        };
+        document.write(student + '<hr>');
+        //객체 속성 제거
+        delete (student.hobby);
+        delete (student.age);
+        document.write('객체 속성 제거후 : ' + student + '<br>');
+    </script>
+</head>
+<body> 
+
+</body>
+</html>

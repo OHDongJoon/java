@@ -1,0 +1,66 @@
+[ III ] join : 2개 이상의 테이블을 연결하여 데이터를 검색하는 방법
+
+1. Join의 필요성
+- 특정부서번호에 대한 부서이름은 무엇인지 dept 테이블에 있고
+ 특정 사원에 대한 부서명을 알아내기 위해서는 부서 테이블에서 정보를 얻어와야 합니다
+ join을 하지 않는 경우 다음의 두 SQL문을 통해 알아내야 하는 번거로움이 있다.
+	
+­ SELECT ename, deptno FROM emp ORDER BY deptno;
+
+­ SELECT deptno, dname FROM dept;
+
+2. Cross Join
+ - Cross Join은 특별한 키워드 없이 다음과 같이 FROM절에 두 개 이상의 테이블을 기술하는 것
+   	SELECT * FROM EMP, DEPT;
+
+Cross Join의 결과를 보면 
+사원 테이블에 부서에 대한 상세정보가 결합되긴 했지만, 
+조인 될 때 아무런 조건을 제시하지 않았기에 
+사원 한명에 대해서 DEPT 테이블의 4개의 로우와 결합된 형태이기에 
+Cross Join의 결과는 아무런 의미를 갖지 못 한다
+
+-조인 결과가 의미를 갖으려면 조인할 때 조건을 지정. 조인 조건에 따라 조인의 종류가 결정.
+
+­ Equi Join : 동일한 컬럼을 기준으로 조인
+
+­ Non-Equi Join : 동일한 컬럼없이 다른 조건을 사용하여 조인
+
+­ Outer Join : 조인 조건에 만족하지 않는 행도 나타나는 조인
+
+­ Self Join : 한 테이블 내에서 조인.
+
+3. Equi Join
+  EQUI JOIN은 가장 많이 사용하는 조인 방법으로서 조인 대상이 되는 
+  두 테이블에서 공통적으로 존재하는 컬럼의 값이 일치되는 행을 연결하여
+   결과를 생성하는 조인 방법
+
+-다음은 사원 정보를 출력할 때 각 사원들이 소속된 부서의 상세 정보를 출력하기 위해서 두 개의 테이블을 조인한 예
+
+­ SELECT * FROM emp, dept WHERE emp.deptno=dept.deptno;
+
+l 사원(EMP) 테이블과 부서(DEPT) 테이블의 공통 컬럼인 DEPTNO의 값이 일치(=)되는 조건을 WHERE 절에 기술하여 사용.
+
+
+- 동일한 이름의 컬럼은 반드시 컬럼명앞에 테이블명을 명시적으로 기술함으로서 
+컬럼이 어느 테이블 소속인지 구분할 수 있게 합니다
+ - SELECT emp.ename, dept.dname, emp.deptno FROM emp, dept
+	WHERE emp.deptno=dept.deptno AND ename=’SCOTT’;
+
+-테이블 이름에 별칭을 붙이는 방법은 FROM 절 다음에 테이블 이름을 명시하고 
+공백을 둔 다음에 별칭을 지정하면 됩니다 테이블 
+별명은 30자이하의 의미있는 단어 사용을 추천한다
+	­ SELECT e.ename, d.dname, e.deptno FROM emp e, dept d
+
+	WHERE e.deptno=d.deptno AND ename=’SCOTT’;
+
+
+4. Non-Equi Join 
+ - Non-Equi Join은 조인 조건에 특정 범위 내에 있는지를 조사하기 위해서 
+WHERE 절에 조인 조건을 = 연산자 이외의 비교 연산자를 사용합니다.
+
+5. Self Join
+ - 조인은 두개 이상의 서로 테이블을 서로 연결하는 것뿐만 아니라, 하나의 테이블 내에서 
+조인을 해야만 원하는 자료를 얻는 경우가 생깁니다.
+- Self Join이란 말 그대로 자기 자신과 조인을 맺는 것
+
+

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var btnA = document.querySelector('#btnA'); //boey에 btnA 가져와
+            var btnB = document.querySelector('#btnB');
+            var countA = document.querySelector('#countA');
+            var countB = document.querySelector('#countB');
+            // btnA를 클릭할 경우 강제로 btbB의 클릭이벤트 발생 
+
+            btnA.onclick = function () { // btnA 클릭하면 수행해 
+                countA.innerHTML = Number(countA.innerHTML) + 1; // 현재 innerHTML에 있는거에 1더한거 
+                //btnB 클릭이벤트 강제 발생
+                btnB.onclick();
+            };
+            fun = function () { };
+            btnB.onclick = function () {
+                countB.innerHTML = Number(countB.innerHTML) + 1;
+            };
+        };
+    </script>
+</head>
+<body>
+    <button id="btnA">Button A</button>
+    <button id="btnB">Button B</button>
+    <h1>Button A - <span id="countA">0</span></h1>
+    <h1>Button B - <span id="countB">0</span></h1>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {width:800px; margin:0 auto;}
+        #header{
+            text-align:center;
+            border-bottom : 1px solid #cccccc;
+        }/*첫번째 라인 블럭 싹다 */
+        #content p:nth-child(2)::first-line,
+        #content p:nth-child(3)::first-line{
+
+            color:blue;
+            font-weight : bold;
+            font-size : 1.3em;
+        }/*first letter :  첫번째글자 */
+        #content p:nth-child(2)::first-letter, 
+        #content p:nth-child(3)::first-letter{
+            font-size:2em /*40px;*/
+        }
+        #content p:nth-child(2)::selection{
+            background-color:violet;
+            color : yellow;
+        }
+        #footer ul {
+            overflow: hidden; /*block형 태그를 수평으로 놓고자 하는 부모*/
+        }
+            #footer ul li {
+                float: left; /*block형 태그를 수평으로만드는 자식새끼*/
+                list-style:none; /*똥고라미 지우는 거*/
+                padding : 10px;
+                margin: 5px 10px;
+            }
+            #footer ul li:first-child{padding-top : 20px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>같은 만물은 넣는 사막이다. 열매를 행복스럽고 원질이 그들은 그리하였는가? </p>
+            
+            <p> 같은 만물은 넣는 사막이다. 열매를 행복스럽고 원질이 그들은 그리하였는가? 기관과 피부가 심장은 없으면 있는 못할 트고, 뭇 그들은 이것이다.
+                쓸쓸한 착목한는 설레는 반짝이는 청춘의 이상 그것을 생명을 보라.
+                하였으며, 가는 힘차게 때문이다. 가지에 그러므로 보이는 얼마나 속에 우리의 있다.
+                    살 석가는 날카로우나 봄바람이다. 길지 찾아 쓸쓸한 부패뿐이다.
+            </p>
+            
+            <p>
+                같은 만물은 넣는 사막이다. 열매를 행복스럽고 원질이 그들은 그리하였는가? 기관과 피부가 심장은 없으면 있는 못할 트고, 뭇 그들은 이것이다.
+
+                쓸쓸한 착목한는 설레는 반짝이는 청춘의 이상 그것을 생명을 보라. 하였으며, 가는 힘차게 때문이다. 가지에 그러므로 보이는 얼마나 속에 우리의 있다.
+
+                살 석가는 날카로우나 봄바람이다. 길지 찾아 쓸쓸한 부패뿐이다.
+            </p>
+            <ul>
+                <li><img src="0503/logo.png" alt="회사로고" /></li>
+                <li><img src="0503/add.png" alt="회사주소" width="500" /></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="0503/logo.png" alt="회사로고" /></li>
+                <li><img src="0503/add.png" alt="회사주소" width="500" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

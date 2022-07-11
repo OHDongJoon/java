@@ -1,0 +1,17 @@
+package com.lec.ex3_shape;
+
+public class Triangle extends Shape {
+	private int w; // 가로
+	private int h; // 세로
+	public Triangle(int w, int h) {
+		this.w = w;
+		this.h = h;
+	}
+
+	@Override
+	public double computeArea() {
+
+		return w * h * 0.5;
+
+	}
+}

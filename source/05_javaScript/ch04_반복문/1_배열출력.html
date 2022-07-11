@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr = [273, 32, '췡쥔영'];
+        document.write('<h2> 1. 일반for문 이용한 배열 출력</h2> </br>');
+        for (var i = 0; i < arr.length; i++) {
+            document.write(i + '번째 :' + arr[i] + '<br>');
+        }
+        //for-in문
+        document.write('<h2> 2. for-in문 이용한 배열 출력 </h2> </br>');
+        for (var idx in arr) {
+            document.write(idx + '번째 :' + arr[idx] + '<br>');
+        }
+        //forEach
+        document.write('<h2> 3. (index없이) forEach함수 이용한 배열 출력</h2> </br>');
+        // 배열명 :: arr
+        // 배열안의 데이터 (data) : 273, 32, '홍길동'
+        // 배열의 인덱스(idx) : 0, 1, 2
+        arr.forEach(function (data, idx) {
+            document.write(idx + '번째 :' + data);
+        });
+
+        //forEach
+        document.write('<h2> 4. (index없이) forEach함수 이용한 배열 출력 </h2></br>');
+        arr.forEach(function (data) {
+            document.write(data + '<br>');
+        })
+
+        //
+    </script>
+</head>
+<body>
+
+</body>
+</html>

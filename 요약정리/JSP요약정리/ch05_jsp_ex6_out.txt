@@ -1,0 +1,27 @@
+ex6_out
+getBufferSize() 메소드는 버퍼의 크기를 구합니다.
+
+getRemaining() 메소드는 버퍼의 남은 크기를 구합니다.
+
+
+ex7_application(2교시)
+
+(WEB-INF에 input.txt 만들기)
+String filePath = application.getRealPath("WEB-INF/input.txt");
+	: input.txt 가져오기 
+@ 스트림객체생성 (파일은 연다) 
+	BufferedReader br = new BufferedReader(new FileReader(filePath)); 
+@ 읽는다  - 
+while(true){
+	String line = br.readLine();// 파일 읽기(한줄씩), 한줄씩 읽다가 끝나면 null 반환
+	if(line==null) break;
+	out.println(line + "<br>");
+	}
+
+스트림객체를닫는다 (파일닫는다)
+br.close();
+
+
+WebContent 바로밑에
+index.jsp  생성
+<%response.sendRedirect("lect2_innerObject/ex5_loginFrm.jsp"); %> : 대표 페이지 생성?

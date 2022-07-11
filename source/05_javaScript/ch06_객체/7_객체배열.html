@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var students = [{ name: '홍길동', kor: 99, mat: 90, eng: 98, sci: 100 },
+            { name: '김길동', kor: 99, mat: 90, eng: 98, sci: 100 }];
+        students.push({ name: '김길동', kor: 100, mat: 50, eng: 98, sci: 100 });
+        students.push({ name: '신길동', kor: 89, mat: 60, eng: 98, sci: 100 });
+        students.push({ name: '마유동', kor: 79, mat: 80, eng: 98, sci: 100 });
+
+        /*students[0].getSum = function () { return 국 + 영 + 수 + 과; };
+       students[1].getSum = function () { return 국 + 영 + 수 + 과; };
+       students[2].getSum = function () { return 국 + 영 + 수 + 과; };
+       students[3].getSum = function () { return 국 + 영 + 수 + 과; };
+       students[4].getSum = function () { return 국 + 영 + 수 + 과; };*/
+
+        for (var idx in students) { // idx에 students[0~4까지 들어감 ]  첫 for문
+            students[idx].getSum = function () { // 총합 함수 sum 
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            students[idx].getAvg = function () { // 요기까지 왔다는건 sum 실행후임
+                return Math.round(this.getSum() / 4);
+            };
+            students[idx].toString = function () {
+                var output = ' '; // 아무것도 없는 빈스트링 초기화
+                for (var key in this) {
+                    if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                        output += key + ' : ' + this[key] + '<br>';
+                    } else if (key == 'getSum' || key == 'getAvg') {
+                        // substring(3) : 3번째 인덱스 부터 끝가지
+                        output += key.substring(3).toUpperCase() + ' : ' + this[key]() + '<br>';
+                    } //if
+                } // 두번째for
+                return output;
+            };
+        } //처음for 
+        // 1.  students 배열 출력 : 일반 for문
+        var output = ' ';
+        for (var idx = 0; idx < students.length; idx++) {
+            output += idx + '번째' + '<br>';
+            output += students[idx].toString();
+        }
+        document.write(output);
+       // alert(ouput.replaceAll('<br>', '\n'));
+        // 2. students 배열 출력 : for - in문
+        
+
+
+        // 3. students 배열 출력 : forEach() 함수 이용
+        document.write('<h4>forEach()함수이용');
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째<br>');
+            document.write(data + '<hr>');
+        })
+        function replaceAll(str, oldStr, newStr) {  // str내의 oldStr 부분을 newStr로 모두 교체
+            var splitStr = str.split(oldStr);
+            var joinStr = splitStr.join(newStr);
+            return joinStr;
+            //return str.split(oldStr).join(newStr);
+
+        }
+      
+    </script>
+</head>
+<body>
+
+</body>
+</html>

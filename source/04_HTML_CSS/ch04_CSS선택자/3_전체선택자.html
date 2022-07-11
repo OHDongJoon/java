@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * { /*전체 선택자 : 모든 태그에 적용 : 전체 페이지 디자인 초기화 용도*/
+            margin: 0; /* 밖여백*/
+            padding: 0; /* 안여백*/
+            /* 페이지 내 기본 폰트 설정 */
+            color : saddlebrown;
+        }
+        header, nav, section, footer{
+            border:1px solid gray;
+            width:500px; /*가로사이즈욧*/
+            margin : 10px auto; /*상, 우, 하, 좌(시계방향) auto 하면 항상 가운데 정렬*/
+            border:1px solid gray;
+        }
+        header h1 {text-align:center;}
+        nav ul {overflow:hidden;}/* 수평으로 하고 픈 태그의 부모단에다 히든 카드~*/
+            nav ul li { /* nav 가 감싸고 있는 ul li */
+                float:left;/*block타입태그를 수평으로 배치 */
+                list-style : none; /* 꽁꽁 없애는법*/
+                /*padding : 10px 31px;  10px 20px 10px 20px 상우하좌 안 여 백*/
+                width:125px;
+                text-align:center;
+            }
+            section{
+                clear : both;/*over flow : hidden; 을 잘 했으면 생략*/
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>00 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사소개</li>
+            <li>서비스</li>
+            <li>고객센터</li>
+            <li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>
+            이것을 커다란 싹이 피고 그들은 물방아 많이 오직 운다. 날카로우나 되는 품에 따뜻한 얼마나 그들을 칼이다. 
+            사랑의 우리의 그들에게 청춘의 목숨이 인류의 때까지 사막이다. 붙잡아 석가는 무한한 인생에 것이다. 있는 실로 그들에게 얼마나 위하여서, 
+            아름답고 뼈 광야에서 대한 이것이다. 피고, 싸인 같지 인생에 지혜는 이것이다. 못할 얼음에 수 위하여, 사랑의 위하여 소리다.이것은 구할 용감하고 때문이다. 
+           
+            
+        </p>
+
+    </section>
+    <footer>
+        <p>서울시 강남구 강남대로94길 13 좋은빌디 402호</p>
+    </footer>
+</body>
+</html>

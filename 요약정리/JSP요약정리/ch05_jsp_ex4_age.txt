@@ -1,0 +1,29 @@
+05-24 (3교시) ex4_age .html 
+age.html -> age.jsp -> pass.jsp -> ng.jsp
+첫 화면      나이입력 후 성인        미성년자 
+
+<form action="ex4_age.jsp"> method 안적으면 자동으로 "get" 방식으로 넘어감
+		
+	나이<input type="number" name="age" required="required">
+	<input type="submit" value="인증">
+			 
+</form>
+
+ex4_age.jsp
+(1) sendRedirect(URL) : 지정한 URL로 이동
+	response.sendRedirect("ex4_pass.jsp?age="+age); 그페이지로 나이 넘겨줌
+
+
+
+ex5_loginFrm.jsp   : 첫 화면   로그인 누르면 ex_5loginCertification.jsp 이동
+ 로그인 해서 맞아 ? 오케이 틀려 ? 빨간 msg 뿌려 
+
+
+ex_5loginCertification.jsp : 아이디가 aaa 랑 비번 111 아니면 틀렸어 뿌려
+
+
+
+
+
+
+

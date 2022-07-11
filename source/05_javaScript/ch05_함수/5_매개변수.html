@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        document.write('pow (4,2)=' + pow(4, 2) + '<br>');
+        //선언된 매개벼수보다 많은 매개변수를 넣어서 호출시 뒷 부분은 무시 
+        // pow 에 매개변수 2개인데 변수 더 넣어도 2개뒤에는 무시
+        document.write('pow(3, 2, 2 , "a",4) = ' + pow(3, 2, 2, "a", 4) + '<br>');
+        document.write('pow(3, 2, 2) = ' + pow(3, 2, 2) + '<br>');
+
+        // 선언된 함수의 매개변수보다 적은 매개변수로 호출  : undefined로 할당  return 1 로 반환 
+        document.write('pow(4) = ' + pow(4) + '<br>');
+
+        //매개변수 없이
+        document.write('pow() =' + pow());
+
+
+        function pow(x, y) { // x의 y승을 리턴하는 함수 : pow(4 , 2)
+            var result = 1; //초기값 result에 1 
+            for (var i = 1; i <= y; i++) { //y번 반복
+                result *= x; //result = result * x;
+            }
+            //return  안쓰면 undefined를 안고 호출한 곳으로 간다 !
+            return result;
+        }
+       
+    </script>
+</head>
+<body>
+
+</body>
+</html>

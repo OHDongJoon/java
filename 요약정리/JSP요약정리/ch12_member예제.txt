@@ -1,0 +1,47 @@
+join.js 함수 :  로그인 
+infoConfirm  (){
+
+join_frm.submit 강제 submit
+}
+
+
+modify.js : 정보수정? 새비밀번호 확인
+ 
+MemberDto.java 
+sql에서 받아올 변수설정
+birth 입력 받는값 date가 편하지만 오늘은 Timestamp 사용
+
+MemberDao.jave 
+생성하고 순서 
+1. static 변수 설정 성공 1 실패 0
+-public static final int SUCCESS =1 ; 회갑 성공
+
+2.싱글톤 
+private static MemeberDao instance;
+public static MemberDao getInstance(){
+instance == null instance =new~
+}
+
+24 번줄 
+conn 객체 리턴 함수 try 안하고 throws 
+
+main.jsp
+로그인후 
+-정보수정
+-로그아웃
+로그인전
+-회원가입
+-로그인
+
+modify 할때
+modifyOk 할때
+modify 에서 입력한 oldPw와 session에 있는 pw와 비교해서 같을때만
+수정하기. 
+
+oldPw 와 session.pw 가 같을때
+새로운 비번 "" 이나 null이 아닐때 pw비밀번호 새로 등록하기 ? 샹?
+odifyOk.jsp
+id,pw,name,phone1,phone2,phone3,gender,email,adddress
+-------------------------------------
+	oldPW,tempbirthd
+

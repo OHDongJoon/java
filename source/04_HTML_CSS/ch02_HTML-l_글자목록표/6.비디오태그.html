@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!-- preload 없이 하면 미리 로드 안됨 -->
+    <!--비디오 원본 크기 그대로 실행-->
+    <video controls="controls" src="sound/sonatina.mp4"></video>
+
+    <!-- 크기 조정-->
+    <video controls="controls" src="sound/sonatina.mp4" width="200"></video>
+    <br />
+    <hr color="red" />
+    <br />
+    <!--poster : 썸네일-->
+    <video controls="controls" poster="https://th.bing.com/th/id/OIP.pBMkBaK7XIliCDlHHV2dCQHaLG?w=186&h=279&c=7&r=0&o=5&pid=1.7"  preload="auto">
+        <source src="sound/sonatina.mp4" />
+    </video>
+</body>
+</html>

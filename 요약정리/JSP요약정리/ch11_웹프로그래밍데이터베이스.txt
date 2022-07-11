@@ -1,0 +1,17 @@
+[ 11 ] 웹프로그래밍에서의 데이터베이스
+1. Statement 객체
+-executeQuery() : SQL 문 실행 후 여러 개의 결과값 생기는 경우 사용 ex.Select
+-executeUpdate() : SQL문 실행 후 테이블의 내용만 변경되는 경우 사용 ex.insert, delete,uqdate
+- executeQuery() 실행 후 반환되는 레코드 셋
+
+
+--ex_1mysql--
+--mysql Workbench 접속-------------
+show databases; --이름확인 
+use kimdb; 
+select * from personal; -- jsp 에서 출력
+ResultSet.next() : 다음 레코드로 이동
+ResultSet.previous() : 이전 레코드로 이동
+ResultSet.first() : 처음 레코드로 이동
+ResultSet.last() : 마지막 레코드로 이동
+get메소드 :  getString, getInt

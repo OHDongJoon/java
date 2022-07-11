@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <h2>오늘의 메뉴와 식당 선택</h2>
+   <form action="../Ex2" >
+      <p>메뉴 :
+      		<select name="menu" multiple="multiple" size="3"> <!-- size 지정안하면 4개 다보임  -->
+      			<option>된장찌개</option>
+      			<option>김치찌개</option>
+      			<option>고추장찌개</option>s
+      			<option>부대찌개</option>	
+      		</select>
+      </p>
+      <p>식당 :
+      	
+      	<input type="checkbox" name="rest" value="강남">강남
+      	<input type="checkbox" name="rest" value="제주">제주
+      	<input type="checkbox" name="rest" value="수원">수원
+      	<input type="checkbox" name="rest" value="양주">양주
+      	
+      	</p>
+      	<p> 국적 :
+      		<input type="radio" name="nation" value="한국" checked="checked">한국
+      		<input type="radio" name="nation" value="우크라이나">우크라이나
+      		<input type="radio" name="nation" value="독일">독일
+      	</p>
+      	<p> 
+      	<input type="submit">
+      	</p>
+   
+   </form>
+</body>
+</html>

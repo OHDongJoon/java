@@ -1,0 +1,51 @@
+1.  Ajax : 서버와 데이터 교환을 하는 기술
+
+
+
+★ ★ ★ ★ ★ ★ ★ 1_get함수 .html ★ ★ ★ ★ ★ ★★
+ $.get(요청경로, callback(data , status){
+     data : 요청경로의 수행 결과
+      (idConfirm.html)    입력한  (idConfirm.html)
+           status : success / fail 
+    	   })
+- $.get('idConfirm.jsp?mid='+mid) 해서 넘기기 
+
+ ★버튼 클릭 이벤트
+- id 2글자 이상 알라트 뿌리기 
+    $('#mid').keyup(function(){ 
+        var mid = $('#mid').val();
+               if(mid.length < 2) {
+                   성공 로직 
+              }
+
+★ ★ ★ ★ ★ ★ ★  idConfirm.jsp  ★ ★ ★ ★ ★ ★ ★
+-  mid 받아오고
+-  dao 호출
+-   int   result = dao.confirmId 함수 호출
+ -  if  ( result == MemberDao.EXISTENT) 이면 
+    중복된 아이디
+ -   else 사용가능한 id
+
+★ ★ ★ ★ ★ ★ ★ 2_post함수 ★ ★ ★ ★ ★ ★ ★★★
+
+
+
+
+★ ★ ★ ★ ★ ★ ★ 3_함수 ★ ★ ★ ★ ★ ★ ★★★
+
+- url : 요청경로 ★
+- data : 요청파라미터이름과 파라미터값 ★ 
+- type(요청방식) : get방식 / post방식  ★ 디폴트값 get 
+- dataType() : html / json / 요청한 경로로 실행한 결과 ★
+- success : 성공시 수행할 콜백함수! ★
+- error :  실패시 수행할 콜백함수!
+
+★ ★ ★ ★ ★ ★ ★ json ★ ★ ★ ★ ★ ★ ★★★
+객체 배열이다 ~
+
+
+★ ★ ★ ★ ★ ★ ★ jq04_ajax_mvc★ ★ ★ ★ ★ ★ ★
+
+
+
+

@@ -1,0 +1,12 @@
+[START WITH n] -- n부터  시작
+   [NCREMENT BY n] -- n만큼 증가
+ 
+  MAXVALUE n | NOMAXVALUE 	--최대값
+
+  MINVALUE n | NOMINVALUE 	-- 최소값
+
+      CYCLE      | NOCYCLE 		-- 최대값도달시 순환, 비순환(에러)
+
+   CACHE n      | NOCACHE 	              -- CACHE은 메모리상의 시퀀스 값을 관리하
+
+

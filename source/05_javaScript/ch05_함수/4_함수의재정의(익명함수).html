@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <script>
+        var funVar = function() {
+            alert('함수 A');
+        };
+        funVar();  // 함수 A
+
+        // 익명 함수의 재정의  위에서부터 아래로 차곡차곡 실행
+
+        var funVar = function() {
+            alert('함수B');
+        }
+        funVar(33); //함수 B 매개변수 잘못넣어도 에러 안남 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

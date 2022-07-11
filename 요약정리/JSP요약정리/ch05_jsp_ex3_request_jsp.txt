@@ -1,0 +1,16 @@
+ex3_request.jsp == Ex3.jsp2(2교시)
+ 
+
+Ex3.jsp :
+
+어떤 요청 이 들어왔는지 
+
+String conPath = request.getContextPath(); // conPath = "/ch05_jsp"
+	String uri	   = request.getRequestURI(); // uri = url에서 로컬호스트 빼고 "/ch05_jsp/Ex3"
+	String command = uri.substring(conPath.length());
+		-conPath (요청들어온) command에 넣어
+
+	System.out.println("conPath = " + conPath);
+	System.out.println("uri     = " + uri);
+	System.out.println("command = " + command);
+

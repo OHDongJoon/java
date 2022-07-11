@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header, #wrap, #footer{
+            width:600px; margin:0 auto; border:1px solid gray;
+        }
+        #header {overflow:hidden;}
+        #header .logo{ /* 후손선택자 header 바로밑에 */
+            float:left; padding: 10px 30px 10px 100px;
+        }
+            #header > .name { /* 자손 선택자 header 밑에 logo 밑에 name 자손선택자(바로아래단)*/
+                float: left;
+                padding: 20px 30px 10px 70px;
+            }
+            div p{/*후손선택자(div 밑에 있는 p)*/
+                  font-size:25px; /*p태그의 기본 font-size는 16 */
+            }
+            div > p { /* 자손선택자 (div 바로 밑에 있는 p)*/
+                      color : red;
+                      font-size : 16px;
+            }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="name">
+            <h2>00 주식회사</h2>
+        </div>
+    </div>
+    <div id="wrap">
+        <p>
+            두손을 얼마나 그러므로 천지는 청춘을 위하여 이것이다. 풀이 찾아 낙원을 지혜는 위하여, 소금이라 그들은 크고 같은 말이다. 보이는 얼마나 같은 때문이다. 커다란 때까지 맺어, 가치를 피어나는 품으며, 투명하되 크고 보는 보라. 새가 이상, 청춘의 못할 것은 같은 그리하였는가? 얼마나 옷을 산야에 방지하는 우는 봄바람이다. 피는 장식하는 되려니와, 힘차게 작고 청춘은 맺어, 예가 바로 칼이다. 인간에 그러므로 방황하였으며, 있는 인생에 주는 청춘의 인생의 소담스러운 아니다. 따뜻한 사는가 끓는 보내는 이것이다. 영락과 예가 트고, 교향악이다.
+        </p>
+        <ul>
+            <li><p>두손을 얼마나 그러므로 천지는 청춘을 위하여 이것이다.소금이라 그들은 크고 같은 말이다. 보이는 얼마나 같은 때문이다.</p></li>
+            <li><p>두손을 얼마나 그러므로 천지는 청춘을 위하여 이것이다.소금이라 그들은 크고 같은 말이다. 보이는 얼마나 같은 때문이다.</p></li>
+            <li><p>두손을 얼마나 그러므로 천지는 청춘을 위하여 이것이다.소금이라 그들은 크고 같은 말이다. 보이는 얼마나 같은 때문이다.</p></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>서울시 가남구 여사동 좋은뷜뒹~! 402호</p>
+    </div>
+</body>
+</html>

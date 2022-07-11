@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child;
+        function openBig() {
+            //새창열기 뽕션
+           child = open('4_big.html', '', 'width=700, height=760');
+            if (!child) {
+                alert('팝업 차단 해제하세요');
+            }
+        }
+        function closeBig() {
+            // 열린 새창 닫기 뽕션
+            child.close(); // window.close() : 현재 창 닫기 
+        }
+    </script>
+</head>
+<body>
+    <!--onmouseover 마우스 올리면 !!!!!!!!-->
+    <!--onmouseover 마우스 떼면!! !!!!!!!!-->
+    <h3>작은 그림의 parent창</h3>
+    <img src="img/small.jpg" alt="작은그림"
+         onmouseover="openBig()"
+         onmouseout="closeBig()" />
+</body>
+</html>

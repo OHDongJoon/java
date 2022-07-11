@@ -1,0 +1,81 @@
+1. MVC 패턴의 이해 
+  - MVC란 Model, View, Controller를   뜻하는 용어로 개발 형태의 일종
+ - Model은 데이터베이스와의 관계를 담당  클라이언트의 요청에서 필요한 자료를 
+      데이터 베이스로부터 추출하거나 수정하여 Controller로 
+                  전달 합니다 
+ - View는 사용자한테 보여지는 UI 화면 입니다.
+            주로 .jsp파일로 작성 하며 Controller에서
+                      어떤 View 컴포넌트를 보여줄지 결정
+ -Controller는 클라이언트의 요청을 받고 
+            적절한 Model에 지시를 내리며 
+                      Model에서 전달된 데이터를   적절한 View에 전달 합니다 .
+
+
+
+--- member.sql 생성 -> MemberDto -> MemberDao-------------------
+
+------------- ------index.jsp--------------------
+요청 
+회원리스트  memberList.do
+
+회원가입 memberJoin_view.do
+
+-index  -> MemberController.java 
+--------MemberController.java  ~~~~
+@webServlet("*.do)  맨처음 
+- String command 설정 
+- Service 인터페이스 임폴트 
+- .do 눌렀을때 로직 수행 만들기 
+
+★ ★ ★ ★ ★ ★ ★ ★if equals memberList.do 이면★ ★ ★ ★ ★ ★ ★
+     -list 로직 수행객체
+     -service = new MemberListService 호출
+------------------※    MemberListService  ※   는 ------------------------------------
+   - 인터페이스 Service 를 import 한 클래스 
+    -Member dao getInstance  호출
+   - ArrayList   members = dao에 있는 listMember 호출
+    -requst.set ("memberList"에 , members값 담기) 
+          이 값을 가지고  memberList로 가서  
+    -memberList.size() 있나 없나 물어보기  
+---------------------------------------------------------------------------
+     -객체 메소드 (request , response) ;
+     -viewPage = "member/memberList.jsp";
+        실행하고 일로가 
+   - memberList.jsp 로직 출력!!!!!!!!1
+
+★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
+
+
+
+
+
+★ ★ ★ ★ ★ ★ ★ ★else if memberjoin_view.do 이면 ★ ★ ★ ★ ★ ★ ★
+   -회원가입 form 실행 
+  - 애는 회원가입 form 만 제공 하는 역할 
+  - 서비스 로직을 부를일이 없음
+  - view 단 설정
+ viewPage = "member/join.jsp" 
+ 실행하게 되면 바로 form 으로 가게 
+
+★ ★ ★ ★ ★ ★ ★  ★ ★    ★  ★ ★ ★ ★ ★ ★ ★  ★ ★    ★ 
+
+
+
+
+★ ★ ★ ★ ★ ★    else if memberJoin.do 이면    ★ ★  ★ ★    ★  
+   -회원 가입 form 에서 회원가입 버튼을 누르면 실행 
+   - service = new MemberJoinService() 호출 
+          -------------※ MemberJoinService 는 ※  --------
+	 인터페이스 Service 를   import한 함수 
+   -form 에서 입력받은 id , pw name birth 받아오고 
+   -MemberDto 만들어 놓은 객체 생성 추가 
+   -MemberDao getInstance 받아오고 
+    -int result = mDao.joinMember dao함수 호출  
+   - request.set ("joinResult" result);
+        성공 , 실패 값을 joinResult에 담고 그값을 memberList
+        에서 성공 실패 출력  
+      ---------------------------------------------------------
+
+★ ★ ★ ★ ★ ★ ★  ★ ★    ★  ★ ★ ★ ★ ★ ★ ★  ★ ★    ★ 
+
+
