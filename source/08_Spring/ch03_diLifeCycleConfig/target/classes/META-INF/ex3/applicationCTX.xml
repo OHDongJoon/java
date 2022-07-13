@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="family" class="com.lec.ch03.ex1.Family" scope="singleton"> <!-- 싱글톤 -->
+		<constructor-arg value="오아빠"/>
+		<constructor-arg value="오엄마"/>
+		<property name="sisterName" value="오딸램"/>
+		<property name="brotherName" value="오아들램"/>
+	</bean>
+	<bean id="familyPrototype" class="com.lec.ch03.ex1.Family" scope="prototype"> <!-- prototype!! -->
+		<constructor-arg value="동아빠"/>
+		<constructor-arg value="동엄마"/>
+		<property name="sisterName" value="동딸램"/>
+		<property name="brotherName" value="동아들램"/>
+	</bean>
+</beans>
