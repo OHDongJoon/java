@@ -5,6 +5,37 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
+		<!-- ProxyClass  AOP 체크하고와-->
+		<bean id="proxyClass" class="com.lec.ch05.ex1.ProxyClass"/>
+		<aop:config>
+			<aop:aspect id="aroudAspect" ref="proxyClass">
+					<!-- ch05.ex1 * (모든거) Student , Worker 의 method "aroundAdvice" 핵심기능으로 설정 -->
+				<aop:pointcut expression="within(com.lec.ch05.ex1.*)" id="aroundM"/>
+				<aop:around method="aroundAdvice" pointcut-ref="aroundM"/>
+			</aop:aspect>
+			
+			<aop:aspect id="beforeAspect" ref="proxyClass">
+				<aop:pointcut expression="execution(void com.lec.ch05.ex1.Worker.*())" id="beforeM"/>
+				<aop:before method="beforeAdvice" pointcut-ref="beforeM"/> <!-- before 사용 하면 전에 실행 -->
+			</aop:aspect>
+			
+			<aop:aspect id="afterAspect" ref="proxyClass">
+						<!-- bean에서 (stud 로시작하는 * 모든거  )  -->
+				<aop:pointcut expression="bean(stud*)" id="afterM"/>
+				<aop:after method="afterAdvice" pointcut-ref="afterM"/>
+			</aop:aspect>
+			
+			<aop:aspect id="afterReturnAspect" ref="proxyClass">
+				<aop:pointcut expression="within(com.lec.ch05.ex1.Worker)" id="afterReturnM"/>
+				<aop:after-returning method="afterReturningAdvice" pointcut-ref="afterReturnM"/>
+			</aop:aspect>
+			
+			<aop:aspect id="afterThrowingAspect" ref="proxyClass">
+				<aop:pointcut expression="execution(void com.lec.ch05.ex1.Student.*())" id="afterThrowM"/>
+				<aop:after-throwing method="afterThrowingAdvice" pointcut-ref="afterThrowM"/>
+			</aop:aspect>
+		</aop:config>
+		
 		<bean id="student" class="com.lec.ch05.ex1.Student">
 			<property name="name" value="오동준"/>
 			<property name="age" value="20"/>
@@ -17,15 +48,5 @@
 			<property name="age" value="100"/>
 			<property name="job" value="개발자"/>
 		</bean>
-		
-		<!-- ProxyClass  AOP 체크하고와-->
-		<bean id="proxyClass" class="com.lec.ch05.ex1.ProxyClass"/>
-		<aop:config>
-			<aop:aspect id="aroudAspect" ref="proxyClass">
-					<!-- ch05.ex1 * (모든거) Student , Worker 의 method "aroundAdvice" 핵심기능으로 설정 -->
-				<aop:pointcut expression="within(com.lec.ch05.ex1.*)" id="aroundM"/>
-				<aop:around method="aroundAdvice" pointcut-ref="aroundM"/>
-			</aop:aspect>
-		</aop:config>
 	
 </beans>

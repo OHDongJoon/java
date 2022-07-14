@@ -4,7 +4,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 
 
 public class ProxyClass {
-	// aroundAdvice 공통 기능 throws 하지만 finally 하는 이유는 핵심기능을 수행한후 return 해준뒤에도 수행해야할 일들이 있을수도 있어서 
+	// aroundAdvice 공통 기능 throws 하지만 finally 하는 이유는 핵심기능을 수행한후 return 해준 뒤에도 수행해야할 일들이 있을수도 있어서 
 	public Object aroundAdvice(ProceedingJoinPoint joinPoint) throws Throwable { //ProceedingJoinPoint   : joinPoin 가르키는아이
 		System.out.println("★★★★★★★★★★★★★★★★★★★★★★★★");
 		String signatureName = joinPoint.getSignature().toString(); // 핵심기능 메소드명
@@ -33,6 +33,6 @@ public class ProxyClass {
 	}
 	// after-thrwing Advice
 	public void afterThrowingAdvice() {
-		System.out.println("예외가 발생된 핵심기능이 수행된 후 이 afterThrowingAdvice 수행");
+		System.out.println("★ 예외가 발생된 핵심기능이 수행된 후 이 afterThrowingAdvice 수행");
 	}
 }
