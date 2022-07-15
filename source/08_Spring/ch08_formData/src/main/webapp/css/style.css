@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body {
+	
+}
+body {
+    font-weight: 300;
+   background-color: lightyellow;
+  
+    height: 100vh;
+  }
+/* .netfix-faq { 전체적으로 가운데 보내기 width 에 margin :auto
+   color : #fff;
+   width: 700px;
+   margin:auto;
+
+}  
+.netfix-faq h1 { h1 태그 가운데 보내기 text -align
+    color : black;
+    text-align: center;
+}
+.netfix-faq .uk-accordion .uk-accordion-title{
+    color: black;
+   
+    border : 3px solid black;
+    padding: 10px;
+
+}
+.netfix-faq .uk-accordion li .uk-accordion-content{
+    background-color: #fff;
+    color  : black;
+     border : 3px solid black;
+    font-size : 30px;
+    padding: 10px;
+   
+}
+.netfix-faq .uk-accordion li.uk-open a {
+    background-color:  #fff;
+}
+.netfix-faq .uk-accordion>:nth-child(n+2) {
+    margin-top: 5px;
+}
+.netfix-faq .uk-accordion .uk-accordion-content{
+    margin-top : 5px;
+   
+}
+.netfix-faq .uk-accordion .uk-accordion-content	p button {
+	background-color: blue;
+	color : white;
+	width: 100px;
+	height: 40px;
+	margin : 0 auto;
+	border-radius : 5px 5px;
+	text-align: center;
+	margin-left : 300px;
+} 
+jsp
+*{
+	
+	
+}
+body{
+	width:1000px;
+	height: 400px;
+	margin : 0 auto;
+	
+	
+}
+h2 {
+	
+	text-align: center;
+	
+}
+
+.mystyle {
+    border: 1px solid #000;
+    text-align: centet;
+    width:100%;
+   
+}   */
