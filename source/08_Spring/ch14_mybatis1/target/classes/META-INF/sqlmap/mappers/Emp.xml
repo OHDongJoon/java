@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace ="Emp"> <!-- 애 이름은 Emp 이고  type Emp 넣어 -->
+ 	<resultMap type="Emp" id="EmpResult">
+ 	  <result property="empno" column="empno"/>
+ 	  <result property="ename" column="ename"/>
+ 	  <result property="job" column="job"/>
+ 	  <result property="mgr" column="mgr"/>
+ 	  <result property="hiredate" column="hiredate"/>
+ 	  <result property="sal" column="sal"/>
+ 	  <result property="com" column="com"/>
+ 	  <result property="deptno" column="deptno"/>
+ 	</resultMap>
+ 	<!-- ? 가  들어갈 예정이면  parameterType : input 받는거 -->
+<select id="empList" parameterType="Emp" resultMap="EmpResult">
+	 	 <!-- 1. 애는 무조건 실행 -->	
+					     SELECT * FROM EMP WHERE 1=1
+	<!-- ename이 널이 아니고 빈스트링이 아니면 밑에 실행해 -->
+	 <if test="ename != null and ename != ''">
+	  <!-- 'A' : Emp안에있는 ename 들어간거고 -->            
+	 AND  ENAME LIKE '%' || #{ename} || '%'											
+	  </if>
+	 											     
+	  <if test="job != null and job != ''">
+	 AND JOB LIKE '%' || #{job} || '%' 
+	</if>
+		        									
+	<if test="deptno != 0">
+	 AND DEPTNO=#{deptno}
+	</if>
+ </select>
+ 
+ </mapper>
