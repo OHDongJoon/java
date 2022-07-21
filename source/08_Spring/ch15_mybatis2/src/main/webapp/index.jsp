@@ -10,6 +10,7 @@
 	<link href="${conPath }/css/style.css" rel="stylesheet">
 </head>
 <body>
-	<jsp:forward page="home.do"></jsp:forward>
+	 <jsp:forward page="empDeptList.do"/>
+	<%-- <jsp:forward page="dummyDataInsert.do"/> --%>
 </body>
 </html>

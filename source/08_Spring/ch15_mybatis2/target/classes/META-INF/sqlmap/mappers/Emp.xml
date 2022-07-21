@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Emp">
+	<resultMap type="Emp" id="EmpResult">
+	 <result property="empno" column="empno"/>
+	 <result property="ename" column="ename"/>
+	 <result property="job" column="job"/>
+	 <result property="mgr" column="mgr"/>
+	 <result property="hiredate" column="hiredate"/>
+	 <result property="sal" column="sal"/>
+	 <result property="comm" column="comm"/>
+	 <result property="deptno" column="deptno"/> <!-- Dept테이블 join -->
+	 <result property="dname" column="dname"/> <!-- Dept테이블 join -->
+	 <result property="loc" column="loc"/>        <!--Dept테이블 join -->
+	</resultMap>
+	
+	<select id="empList" parameterType="Emp" resultMap="EmpResult">
+		SELECT * FROM (SELECT ROWNUM RN, A.* FROM(SELECT * FROM EMP ORDER BY EMPNO) A)
+    	WHERE RN BETWEEN #{startRow} AND #{endRow}	
+	</select>
+	
+	<select id="empDeptList" parameterType="Emp" resultMap="EmpResult">
+		SELECT * FROM (SELECT ROWNUM RN , A.* FROM
+            (SELECT E.*, DNAME, LOC FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO ORDER BY EMPNO) A)
+            WHERE RN BETWEEN #{startRow} AND #{endRow}
+	</select>
+	
+	<select id="totCnt" resultType="int"> <!-- id 는 totCnt  int 값 리턴 이여서 resultType = "int" -->
+	SELECT COUNT (*) FROM EMP
+	</select>
+	
+	<!-- 한줄만 입력 받는아이는 resultType  EMPNO=7698로 상세보기여서 type은 int  -->
+	<select id="detail" parameterType="int" resultType="Emp">
+		SELECT * FROM EMP WHERE EMPNO=#{empno}
+	</select>
+	
+	<select id="managerList" resultMap="EmpResult">
+		SELECT * FROM EMP WHERE EMPNO IN (SELECT MGR FROM EMP)
+	</select>
+
+	
+	<insert id="insert" parameterType="Emp"> <!--애는 1(성공)아니면 0(실패) 만 나오기 때문에 resultType,Map 필요 없음  -->
+	 INSERT INTO EMP VALUES (#{empno}, #{ename}, #{job}, #{mgr},#{hiredate}, #{sal}, #{comm}, #{deptno})
+	</insert>
+	
+	<!-- ? 물음표가 들어가면 parameterType -->
+	<update id="update" parameterType="Emp">
+		UPDATE EMP SET ENAME= #{ename},
+                                JOB= #{job},
+                                MGR= #{mgr},
+                                HIREDATE= #{hiredate},
+                                SAL = #{sal},
+                                COMM = #{comm},
+                                DEPTNO= #{deptno}
+                        WHERE EMPNO= #{empno}
+	</update>
+	
+	<update id="delete" parameterType="int"> <!--  -->
+		DELETE FROM EMP WHERE EMPNO= #{empno}
+	</update>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
