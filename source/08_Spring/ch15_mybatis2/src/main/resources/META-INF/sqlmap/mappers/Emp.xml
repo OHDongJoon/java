@@ -27,6 +27,7 @@
             WHERE RN BETWEEN #{startRow} AND #{endRow}
 	</select>
 	
+	<!-- 글갯수 -->
 	<select id="totCnt" resultType="int"> <!-- id 는 totCnt  int 값 리턴 이여서 resultType = "int" -->
 	SELECT COUNT (*) FROM EMP
 	</select>

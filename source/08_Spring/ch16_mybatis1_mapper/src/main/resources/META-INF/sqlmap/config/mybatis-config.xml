@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 타입선언  type = dto 주소  , alias :긴 주소를 이 렇게 부를거야  -->
+<typeAliases>
+	<typeAlias type="com.lec.ch14.dto.Dept" alias="Dept"/>
+	<typeAlias type="com.lec.ch14.dto.Emp" alias="Emp"/>
+</typeAliases>
+	<mappers>
+		<mapper resource="META-INF/sqlmap/mappers/Dept.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Emp.xml"/>
+	</mappers>
+</configuration>

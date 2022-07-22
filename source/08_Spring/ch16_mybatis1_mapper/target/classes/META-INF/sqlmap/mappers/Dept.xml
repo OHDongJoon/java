@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lec.ch14.dao.DeptDao"> <!-- namespace 엘리아스  -->
+	<!-- type : 엘리아스 이름  Result 결과가 어레이 리스트로 담을때!!!-->
+	<resultMap type="Dept" id="DeptResult">
+		<result property="deptno" column="deptno"/>
+		<result property="dname" column="dname"/>
+		<result property="loc" column="loc"/>
+	</resultMap>
+	
+	<!-- select . insert . update -->
+	<select id="deptList" resultMap="DeptResult"> <!-- resultMap 리턴 타입 위에 있는 id 값  -->
+		<![CDATA[
+		SELECT * FROM DEPT
+		]]>
+	</select>
+</mapper>

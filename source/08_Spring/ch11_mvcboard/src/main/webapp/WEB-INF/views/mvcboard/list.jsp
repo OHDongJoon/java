@@ -84,7 +84,7 @@
 	 	   	<td>${bDto.bname }</td>
 	 	   	<td class="left">
 	 	   	  <c:forEach var="i" begin="1" end="${bDto.bindent }">
-	 	   	    <c:if test="${1 == bDto.bindent }">
+	 	   	    <c:if test="${i == bDto.bindent }">
 	 	   	      ┗ 
 	 	   	    </c:if>
 	 	   	    <c:if test="${i != bDto.bindent }">
