@@ -30,6 +30,9 @@
 <c:if test="${not empty deleteResult }">
 	<script>alert('글삭제 성공')</script>
 </c:if>
+<c:if test="${not empty replyResult }">
+	<script>alert('글답변 성공')</script>
+</c:if>
 <c:set var="num" value="${paging.totCnt - paging.startRow + 1 }"/>
 	<table>
 		<caption>게시판</caption>
@@ -50,11 +53,11 @@
 	    		<td>${bod.bid }</td>
 	    		<td>${bod.bname }</td>
 	    		<td class="left">
-	    		<c:forEach var="i" begin="1" end="${bDto.bindent }">
-	    		  <c:if test="${i == bDto.bindent }">
+	    		<c:forEach var="i" begin="1" end="${bod.bindent }">
+	    		  <c:if test="${i == bod.bindent }">
 	    		  ┗ 
 	    		  </c:if>
-	    		  <c:if test="${i != bDto.bindent }">
+	    		  <c:if test="${i != bod.bindent }">
 	    		  &nbsp; &nbsp; &nbsp;
 	    		  </c:if>
 	    		</c:forEach>

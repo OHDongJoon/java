@@ -55,5 +55,12 @@
 	<delete id="delete" parameterType="int">
 		DELETE FROM MVC_BOARD WHERE BID=#{bid}
 	</delete>
-	
+	<!-- 답변 처리 -->
+	<update id="boardReplyPreStep" parameterType="Board">
+		UPDATE MVC_BOARD SET BSTEP=BSTEP+1 WHERE BGROUP=#{bgroup} AND BSTEP>#{bstep}
+	</update>
+	<insert id="boardReply" parameterType="Board">
+		INSERT INTO MVC_BOARD (bID, bNAME, bTITLE, bCONTENT, bGROUP, bSTEP, bINDENT, bIP)
+    	VALUES (MVC_BOARD_SEQ.NEXTVAL, #{bname},#{btitle},#{bcontent},#{bgroup}, #{bstep}+1, #{bindent}+1, #{bip})
+	</insert>
 </mapper>

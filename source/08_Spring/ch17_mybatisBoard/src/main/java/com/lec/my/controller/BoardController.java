@@ -57,11 +57,14 @@ public class BoardController {
  		model.addAttribute("deleteResult", boardService.delete(bid));
  		return "forward:boardList.do";
  	}
- 	//답변글 뷰 
-	/*
-	 * @RequestMapping(value="replyView", method = RequestMethod.GET) public String
-	 * replyView(int bid , Model model) {
-	 * 
-	 * }
-	 */
+ 	@RequestMapping(value="reply", method = RequestMethod.GET)
+	public String replyView(int bid, Model model) {
+		model.addAttribute("bDto",boardService.updateView(bid));
+		return "reply";
+	}
+ 	@RequestMapping(value="reply", method = RequestMethod.POST)
+	public String reply(Board board, HttpServletRequest request, Model model) {
+		model.addAttribute("replyResult", boardService.boardReply(board, request));
+		return "forward:boardList.do";
+	}
 }

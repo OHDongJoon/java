@@ -2,7 +2,7 @@ package com.lec.my.service;
 
 import java.util.List;
 
-import org.springframework.ui.Model;
+import javax.servlet.http.HttpServletRequest;
 
 import com.lec.my.model.Board;
 
@@ -15,5 +15,5 @@ public interface BoardService {
 	public Board updateView(int bid);
 	public int update(Board bod);
 	public int delete(int bid);
-	
+	public int boardReply (Board board, HttpServletRequest request);
 }
