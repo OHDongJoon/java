@@ -19,7 +19,15 @@
 </head>
 <body>
 	<c:if test="${not empty modifyResult }">
-		<script> alert("정보 수정이 돤료 되었습니다");</script>
+		<script> 
+			alert("정보 수정이 완료 되었습니다");
+		</script>
+	</c:if>
+	<c:if test="${not empty loginResult and loginResult != '로그인 성공' }">
+		<script>
+		  alert('${loginResult }');
+		  history.back();
+		</script>
 	</c:if>
 	<jsp:include page="header.jsp"/>
 	<div id="content">

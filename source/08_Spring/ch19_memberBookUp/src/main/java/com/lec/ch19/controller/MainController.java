@@ -17,4 +17,8 @@ public class MainController {
 		 model.addAttribute("mainList", bookService.mainList());
 		 return "main/main";
 	}
+	@RequestMapping(value="intro",method=RequestMethod.GET)
+	public String intro() {
+		return "main/intro";
+	}
 }

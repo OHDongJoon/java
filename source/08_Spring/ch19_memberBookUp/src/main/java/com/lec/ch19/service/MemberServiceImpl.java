@@ -19,7 +19,7 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	private JavaMailSenderImpl mailSender;
 	@Override
-	public int inConfirm(String mid) {
+	public int idConfirm(String mid) {
 		
 		return memberDao.idConfirm(mid);
 	}

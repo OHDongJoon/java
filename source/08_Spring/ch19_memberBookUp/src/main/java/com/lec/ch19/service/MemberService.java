@@ -6,7 +6,7 @@ import com.lec.ch19.dto.Member;
 
 public interface MemberService {
 	//아디 중복체크
-	public int inConfirm(String mid);
+	public int idConfirm(String mid);
 	//회원가입
 	public int joinMember(Member member, HttpSession httpSession); //회원가입 성공후 세션에 담기위해
 	//로그인체크

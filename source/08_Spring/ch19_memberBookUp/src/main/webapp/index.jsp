@@ -8,9 +8,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+	 <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
 	<link href="${conPath }/css/style.css" rel="stylesheet">
 </head>
 <body>
-	<jsp:forward page="main.do"/>
+
+	<jsp:forward page="intro.do"/>
 </body>
 </html>

@@ -14,7 +14,7 @@
 
 <!-- 아이디 중복 체크 -->	
 	<select id="idConfirm" parameterType="String" resultType="int">
-	SELECT * FROM MEMBER WHERE mID=#{mid}
+	SELECT COUNT(*) FROM MEMBER WHERE MID = #{mid, jdbcType=VARCHAR}
 	</select>
 	
 	<!-- 회원가입 -->
@@ -32,11 +32,12 @@
 	</select>
 	
 	<update id="modifyMember" parameterType="Member">
-	UPDATE MEMBER SET mNAME=#{mname},
-	                        mPW = #{mpw},
-	                        mMAIL = #{mmail},
-	                         mADDR =#{maddr}
-	                         mPOST = #{mpost},
+	UPDATE MEMBER SET 
+							 mNAME=#{mname},
+	                         mPW = #{mpw},
+	                         mMAIL = #{mmail},
+	                         mADDR =#{maddr},
+	                         mPOST = #{mpost}
 	            where mID=#{mid}
 	</update>
 </mapper>

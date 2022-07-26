@@ -18,8 +18,8 @@
 	$(document).ready(function(){
 		$('.idconfirm').click(function(){
 			$.ajax({
-				url : '${conPath}/member.do',
-				datatype : 'html',
+				url :'${conPath}/member.do',
+				datatype :'html',
 				data : "method=idConfirm&mid="+$('#mid').val(),
 				success : function(data, status){
 					$('#idConfirmMsg').html(data);
